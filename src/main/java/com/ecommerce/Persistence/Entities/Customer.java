@@ -1,30 +1,22 @@
 package com.ecommerce.Persistence.Entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
-@Table(name = "customer")
-public class Customer implements Serializable {
-
-    public Customer(String customerName, String password) {
-        this.customerName = customerName;
-        this.password = password;
-    }
-
+@Table(name = "customer", schema = "ecommerce")
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "customer_id")
-    private Long customerId;
+    @Column(name = "customer_id", nullable = false)
+    private Integer id;
 
     @Column(name = "customer_name", nullable = false)
     private String customerName;
@@ -38,10 +30,10 @@ public class Customer implements Serializable {
     @Column(name = "job", nullable = false)
     private String job;
 
-    @Column(name = "email", nullable = false, unique = true)
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "credit_limit", columnDefinition = "DECIMAL(15, 2) DEFAULT 0")
+    @Column(name = "credit_limit", precision = 15, scale = 2)
     private BigDecimal creditLimit;
 
     @Column(name = "city", nullable = false)
@@ -55,4 +47,21 @@ public class Customer implements Serializable {
 
     @Column(name = "street_name", nullable = false)
     private String streetName;
+
+    @Column(name = "interests", nullable = false)
+    private String interests;
+
+    public Customer(String customerName, LocalDate birthday, String password, String job, String email, BigDecimal creditLimit, String city, String country, String streetNo, String streetName, String interests) {
+        this.customerName = customerName;
+        this.birthday = birthday;
+        this.password = password;
+        this.job = job;
+        this.email = email;
+        this.creditLimit = creditLimit;
+        this.city = city;
+        this.country = country;
+        this.streetNo = streetNo;
+        this.streetName = streetName;
+        this.interests = interests;
+    }
 }

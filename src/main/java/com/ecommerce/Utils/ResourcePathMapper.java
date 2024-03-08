@@ -12,7 +12,8 @@ public enum ResourcePathMapper {
     PAGE_PRODUCT_MANAGEMENT("/pages/productManagement.jsp"),
     PAGE_USER_MANAGEMENT("/pages/userManagement.jsp"),
     PAGE_ORDER_MANAGEMENT("/pages/orderManagement.jsp"),
-    PAGE_ABOUT("/pages/about.html");
+    PAGE_ABOUT("/pages/about.html"),
+    PAGE_ERROR("/pages/error.html");
 
     private final String path;
 
