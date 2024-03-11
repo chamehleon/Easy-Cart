@@ -22,7 +22,9 @@ public class FrontController extends HttpServlet {
     private void processRequest(final HttpServletRequest request, final HttpServletResponse response) {
         String controllerName = request.getParameter("controller");
         System.out.println(" Controller is: " + controllerName);
-
+        System.out.println(request.getPathInfo());
+        System.out.println(request.getRequestURI());
+        System.out.println(request);
         ControllerFactory factory = ControllerFactory.getInstance();
         IController controller = factory.getController(controllerName);
         ViewResolver resolver = controller.resolve(request, response);

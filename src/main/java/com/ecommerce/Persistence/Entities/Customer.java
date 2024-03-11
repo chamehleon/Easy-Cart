@@ -64,4 +64,18 @@ public class Customer {
         this.streetName = streetName;
         this.interests = interests;
     }
+    public Customer(String customerName, String password, String email) {
+        this.customerName = customerName;
+        this.password = password;
+        this.email = email;
+        this.birthday = LocalDate.now();
+        this.job = "none";
+        this.creditLimit = new BigDecimal("4440.00");
+        this.city = "none";
+        this.country = "none";
+        this.streetNo = "none";
+        this.streetName = "none";
+        this.interests = "none";
+
+    }
 }

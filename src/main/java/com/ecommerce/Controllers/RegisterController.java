@@ -4,8 +4,8 @@ import com.ecommerce.Controllers.FrontController.IController;
 import com.ecommerce.Controllers.FrontController.ViewResolver;
 import com.ecommerce.Persistence.DTOs.CustomerDTO;
 //import com.ecommerce.Services.RegisterService;
+import com.ecommerce.Persistence.Entities.Customer;
 import com.ecommerce.Services.RegisterService;
-import com.ecommerce.Utils.EntityManagerThreadLocalUtil;
 import com.ecommerce.Utils.ResourcePathMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,10 +16,10 @@ import java.time.LocalDate;
 public class RegisterController implements IController {
     private static RegisterController instance;
     private final RegisterService registerService = new RegisterService();
-   //// private final RegisterService registerService;
+    //// private final RegisterService registerService;
 
     private RegisterController() {
-    //    registerService= new RegisterService();
+        //    registerService= new RegisterService();
     }
 
     public static RegisterController getInstance() {
@@ -31,43 +31,41 @@ public class RegisterController implements IController {
 
     @Override
     public ViewResolver resolve(final HttpServletRequest req, final HttpServletResponse response) {
-        EntityManagerThreadLocalUtil.init(req.getServletContext());
         ViewResolver resolver = new ViewResolver();
         try {
             // Your existing code to handle the request goes here
 
-        String method = req.getMethod();
-        if (method.equals("GET")) {
-            System.out.println("iam Get");
-            resolver.forward(ResourcePathMapper.PAGE_REGISTER.getPath());
-        } else if (method.equals("POST")) {
-            System.out.println("iam Post");
-            String username = req.getParameter("username");
-            String password = req.getParameter("password");
-            String email = req.getParameter("email");
+            String method = req.getMethod();
+            if (method.equals("GET")) {
+                System.out.println("iam Get");
+                resolver.forward(ResourcePathMapper.PAGE_REGISTER.getPath());
+            } else if (method.equals("POST")) {
+                System.out.println("iam Post");
+                String username = req.getParameter("username");
+                String password = req.getParameter("password");
+                String email = req.getParameter("email");
 
-            CustomerDTO customerDTO = new CustomerDTO(
-                    "omar",
-                    "password123",
-                    "omar@example.com"
-            );
+                Customer customerDTO = new Customer(
+                        username,
+                        password,
+                        email
+                );
 
-            // If this request needs an EntityManager
+                // If this request needs an EntityManager
 //            EntityManagerThreadLocalUtil.init(request.getServletContext());
 //            try {
 //                // Handle the request, use services, etc.
 //            } finally {
 //                EntityManagerThreadLocalUtil.closeEntityManager();
 //            }
-
-            boolean registeredSuccessfully = registerService.registerUser(customerDTO);;
-            if (registeredSuccessfully) {
-                System.out.println("registeredSuccessfully = true");
-                resolver.forward(ResourcePathMapper.PAGE_PRODUCT.getPath());
-            } else {
-                System.out.println("registeredSuccessfully = false");
-                resolver.forward(ResourcePathMapper.PAGE_REGISTER.getPath());
-            }
+                boolean registeredSuccessfully = RegisterService.register(customerDTO);
+                if (registeredSuccessfully) {
+                    System.out.println("registeredSuccessfully = true");
+                    resolver.forward(ResourcePathMapper.PAGE_PRODUCT.getPath());
+                } else {
+                    System.out.println("registeredSuccessfully = false");
+                    resolver.forward(ResourcePathMapper.PAGE_REGISTER.getPath());
+                }
 
 /*
             String job = req.getParameter("job");
@@ -89,9 +87,10 @@ public class RegisterController implements IController {
                 resolver.forward(ResourcePathMapper.PAGE_REGISTER.getPath());
             }
         */
+            }
         }
-        } finally {
-            EntityManagerThreadLocalUtil.closeEntityManager();
+        catch (Exception e) {
+            e.printStackTrace();
         }
         return resolver;
     }

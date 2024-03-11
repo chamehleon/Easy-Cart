@@ -4,22 +4,21 @@ import com.ecommerce.Persistence.DAOs.GenericDAOs.GenericDAOImpl;
 import com.ecommerce.Persistence.DAOs.GenericDAOs.GenericDAOInt;
 import com.ecommerce.Persistence.Entities.Customer;
 //import com.ecommerce.Persistence.PersistenceManager;
-import com.ecommerce.Utils.EntityManagerThreadLocalUtil;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 
 import java.util.Optional;
 
-public class CustomerDAO extends GenericDAOImpl<Customer, Integer> {
+public class CustomerDAO extends GenericDAOImpl<Customer> {
     private final static int pageSize = 5;
 
-    public CustomerDAO( EntityManager entityManager ) {
-        super( Customer.class, entityManager );
-        this.entityManager = entityManager;
+    public CustomerDAO() {
+        super(Customer.class);
     }
 
-    public Optional<Customer> findUserByEmail( String email ) {
+    public Optional<Customer> findUserByEmail( String email, EntityManager entityManager ) {
         Customer customer = null;
         email = email.toLowerCase();
         try {
@@ -32,35 +31,35 @@ public class CustomerDAO extends GenericDAOImpl<Customer, Integer> {
         return Optional.ofNullable( customer );
     }
 
-    public Optional<User> findUserByConfirmationId( String confirmationId ) {
-        User user = null;
+    public Optional<Customer> findUserById(int id, EntityManager entityManager) {
+        Customer customer = null;
         try {
-            TypedQuery<User> query = entityManager.createQuery( "SELECT u FROM User u WHERE u.confirmationId = :confirmationId", User.class );
-            query.setParameter( "confirmationId", confirmationId );
-            user = query.getSingleResult();
+            TypedQuery<Customer> query = entityManager.createQuery( "SELECT u FROM Customer u WHERE u.id = :id", Customer.class );
+            query.setParameter( "id", id );
+            customer = query.getSingleResult();
         } catch ( NoResultException nre ) {
             nre.printStackTrace();
         }
-        return Optional.ofNullable( user );
+        return Optional.ofNullable( customer );
     }
 
 
-    public List<User> getPage( int pageNumber ) {
-        TypedQuery<User> query = entityManager.createQuery( "FROM User u where u.role = 'CUSTOMER' ", User.class );
-        return query.setFirstResult( ( pageNumber - 1 ) * pageSize )
-                .setMaxResults( pageSize )
-                .getResultList();
-    }
+//    public List<User> getPage( int pageNumber ) {
+//        TypedQuery<User> query = entityManager.createQuery( "FROM User u where u.role = 'CUSTOMER' ", User.class );
+//        return query.setFirstResult( ( pageNumber - 1 ) * pageSize )
+//                .setMaxResults( pageSize )
+//                .getResultList();
+//    }
 
 
-    public long getNumberOfPages() {
-        Query queryTotal = entityManager.createQuery( "SELECT COUNT(u.id) FROM User u where u.role = 'CUSTOMER' " );
-        long countResult = (long) queryTotal.getSingleResult();
-
-        long finalPage = ( countResult % pageSize > 0 ? 1 : 0 );
-
-        return ( countResult / pageSize ) + finalPage;
-    }
+//    public long getNumberOfPages() {
+//        Query queryTotal = entityManager.createQuery( "SELECT COUNT(u.id) FROM User u where u.role = 'CUSTOMER' " );
+//        long countResult = (long) queryTotal.getSingleResult();
+//
+//        long finalPage = ( countResult % pageSize > 0 ? 1 : 0 );
+//
+//        return ( countResult / pageSize ) + finalPage;
+//    }
 }
 
 

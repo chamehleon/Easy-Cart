@@ -1,15 +1,17 @@
 package com.ecommerce.Persistence.DAOs.GenericDAOs;
 
 
+import jakarta.persistence.EntityManager;
+
 import java.util.List;
 
-public interface GenericDAOInt<T,ID>{
-    public List<T> findAll();
-    public T findById(ID id);
-    public void create(T entity);
-    public T update(T entity);
-    public void deleteById(ID id);
-    public void delete(T entity);
+public interface GenericDAOInt<T>{
+    public List<T> findAll(EntityManager em);
+    public T findById(int id, EntityManager em);
+    public boolean create(T entity, EntityManager em);
+    public T update(T entity, EntityManager em);
+    public void deleteById(int id, EntityManager em);
+    public void delete(T entity, EntityManager em);
 }
 
 //public interface DAO <T>{

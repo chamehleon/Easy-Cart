@@ -11,8 +11,8 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
-            <version>1.5.3.Final</version>
-            <scope>provided</scope>
+            <version>1.4.2.Final</version>
+<!--            <scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>jakarta.servlet.jsp.jstl</groupId>
@@ -61,6 +61,11 @@
             <artifactId>HikariCP</artifactId>
             <version>5.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-hikaricp</artifactId>
+            <version>6.1.7.Final</version>
+        </dependency>
 
     </dependencies>
     <build>
@@ -77,8 +82,8 @@
                             <path>
                                 <groupId>org.mapstruct</groupId>
                                 <artifactId>mapstruct-processor</artifactId>
-                                <version>1.5.3.Final</version>
-                                <scope>provided</scope>
+                                <version>1.4.2.Final</version>
+<!--                                <scope>provided</scope>-->
                             </path>
                         </annotationProcessorPaths>
                     </configuration>

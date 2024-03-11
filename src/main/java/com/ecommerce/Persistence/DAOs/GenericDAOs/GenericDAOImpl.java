@@ -5,41 +5,42 @@ import jakarta.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.List;
 
-public abstract class GenericDAOImpl<T, ID extends Serializable> implements GenericDAOInt<T, ID> {
+public abstract class GenericDAOImpl<T> implements GenericDAOInt<T> {
     protected Class<T> persistentClass;
-    protected final EntityManager entityManager;
+    //protected final EntityManager entityManager;
 
-    protected GenericDAOImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
-    public GenericDAOImpl(Class<T> persistentClass, EntityManager entityManager) {
+//    //protected GenericDAOImpl(EntityManager entityManager) {
+//        this.entityManager = entityManager;
+//    }
+    public GenericDAOImpl(Class<T> persistentClass) {
         this.persistentClass = persistentClass;
-        this.entityManager = entityManager;
+//        this.entityManager = entityManager;
     }
 
-    public List<T> findAll() {
+    public List<T> findAll(EntityManager entityManager) {
         return entityManager.createQuery("from " + persistentClass.getName(), persistentClass)
                 .getResultList();
     }
 
-    public T findById(ID id) {
+    public T findById(int id, EntityManager entityManager) {
         return entityManager.find(persistentClass, id);
     }
 
-    public void create(T entity) {
+    public boolean create(T entity, EntityManager entityManager) {
         entityManager.persist(entity);
+        return entityManager.contains(entity);
     }
 
-    public T update(T entity) {
+    public T update(T entity, EntityManager entityManager) {
         return entityManager.merge(entity);
     }
 
-    public void deleteById(ID id) {
-        T entity = findById(id);
-        delete(entity);
+    public void deleteById(int id, EntityManager entityManager) {
+        T entity = findById(id, entityManager);
+        delete(entity, entityManager);
     }
 
-    public void delete(T entity) {
+    public void delete(T entity, EntityManager entityManager) {
         entityManager.remove(entity);
     }
 }
