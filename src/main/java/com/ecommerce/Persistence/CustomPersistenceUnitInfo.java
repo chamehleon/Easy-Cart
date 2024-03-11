@@ -38,9 +38,7 @@ public class CustomPersistenceUnitInfo implements PersistenceUnitInfo {
 
     @Override
     public DataSource getJtaDataSource() {
-
         return HikariCPDataSource.getInstance().getDataSource();
-
     }
 
     @Override

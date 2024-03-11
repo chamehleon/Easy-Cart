@@ -2,6 +2,7 @@ package com.ecommerce.Controllers.FrontController;
 
 import com.ecommerce.Controllers.CartController;
 import com.ecommerce.Controllers.RegisterController;
+import org.eclipse.tags.shaded.org.apache.regexp.RE;
 
 public class ControllerFactory {
     private static ControllerFactory instance;
@@ -20,7 +21,7 @@ public class ControllerFactory {
         switch (controllerName) {
             case "Cart":
                 return CartController.getInstance();
-            case "Register":
+            case "RegisterController":
                 return RegisterController.getInstance();
             default:
         }

@@ -1,15 +1,14 @@
 package com.ecommerce.Persistence.Mappers;
 
-import com.ecommerce.Persistence.DTOs.CustomerDto;
+import com.ecommerce.Persistence.DTOs.CustomerDTO;
 import com.ecommerce.Persistence.Entities.Customer;
-import org.mapstruct.*;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = MappingConstants.ComponentModel.CDI)
+@Mapper
 public interface CustomerMapper {
-    Customer toEntity(CustomerDto customerDto);
+    CustomerMapper INSTANCE = Mappers.getMapper( CustomerMapper.class );
 
-    CustomerDto toDto(Customer customer);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    Customer partialUpdate(CustomerDto customerDto, @MappingTarget Customer customer);
+    Customer toEntity(CustomerDTO customerDto);
+    CustomerDTO toDto(Customer customer);
 }
