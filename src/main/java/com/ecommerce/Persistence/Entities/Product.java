@@ -34,7 +34,7 @@ public class Product {
     @Column(name = "product_price", nullable = false, precision = 15, scale = 2)
     private BigDecimal productPrice;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 

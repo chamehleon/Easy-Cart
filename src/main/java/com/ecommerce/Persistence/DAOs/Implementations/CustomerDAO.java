@@ -24,7 +24,7 @@ public class CustomerDAO extends GenericDAOImpl<Customer> {
         try {
             TypedQuery<Customer> query = entityManager.createQuery( "SELECT u FROM Customer u WHERE u.email = :email", Customer.class );
             query.setParameter( "email", email );
-            customer = query.getSingleResult();
+            customer = query.getResultList().stream().findFirst().orElse( null );
         } catch ( NoResultException nre ) {
             nre.printStackTrace();
         }

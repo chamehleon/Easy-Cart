@@ -1,7 +1,6 @@
 package com.ecommerce.Controllers.FrontController;
 
-import com.ecommerce.Controllers.CartController;
-import com.ecommerce.Controllers.RegisterController;
+import com.ecommerce.Controllers.*;
 import org.eclipse.tags.shaded.org.apache.regexp.RE;
 
 public class ControllerFactory {
@@ -23,6 +22,12 @@ public class ControllerFactory {
                 return CartController.getInstance();
             case "RegisterController":
                 return RegisterController.getInstance();
+            case "LoginController":
+                return LoginController.getInstance();
+            case "CheckEmailServlet":
+                return CheckEmailServlet.getInstance();
+            case "FetchProducts":
+                return ProductController.getInstance();
             default:
         }
         return null;

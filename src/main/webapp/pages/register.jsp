@@ -85,24 +85,34 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
     <!--===============================================================================================-->
     <title>User Registration</title>
+    <style>
+      .custom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
+
   <body>
     <jsp:include page="header.jsp" />
     <section class="bg0 p-t-104 p-b-116">
       <div class="container">
-        <div class="flex-w flex-tr">
+        <div class="flex-w flex-tr custom">
           <div
             class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md"
           >
             <form method="post" action="?controller=RegisterController">
-              <h4 class="mtext-105 cl2 txt-center p-b-30">Try for free!</h4>
-
+              <h4 class="mtext-105 cl2 txt-center p-b-30">REGISTER</h4>
+              <span id="emailError" style="color: red"></span>
+              <!-- <span id="emailValid" style="color: rgb(82, 171, 82)"></span> -->
               <div class="bor8 m-b-20 how-pos4-parent">
                 <input
                   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  id="email"
                   type="text"
                   name="email"
-                  placeholder="Your Email Address"
+                  placeholder="Email Address"
                 />
                 <img
                   class="how-pos4 pointer-none"
@@ -110,12 +120,13 @@
                   alt="ICON"
                 />
               </div>
+
               <div class="bor8 m-b-20 how-pos4-parent">
                 <input
                   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
                   type="text"
                   name="username"
-                  placeholder="Your Username"
+                  placeholder="Username"
                 />
                 <img
                   class="how-pos4 pointer-none"
@@ -128,13 +139,110 @@
                   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
                   type="password"
                   name="password"
-                  placeholder="Your Password"
+                  placeholder="Password"
                 />
                 <img
                   class="how-pos4 pointer-none"
                   src="../assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="job"
+                  placeholder="Job"
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="birthdate"
+                  placeholder="Birthdate"
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="country"
+                  placeholder="Country"
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="streetNo"
+                  placeholder="Street No."
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="streetName"
+                  placeholder="Street Name"
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="bor8 m-b-20 how-pos4-parent">
+                <input
+                  class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                  type="text"
+                  name="credit"
+                  placeholder="Credit Limit"
+                />
+                <img
+                  class="how-pos4 pointer-none"
+                  src="../assets/images/icons/icon-email.png"
+                  alt="ICON"
+                />
+              </div>
+              <div class="text-center p-t-50 p-b-20">
+                <span class="txt1">Already have an account?</span>
+                <a class="txt1 bo1 hov1" href="?controller=LoginController"
+                  >Sign in</a
+                >
               </div>
 
               <button
@@ -145,7 +253,7 @@
             </form>
           </div>
 
-          <div
+          <!-- <div
             class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md"
           >
             <div class="flex-w w-full p-b-42">
@@ -186,13 +294,16 @@
                 <p class="stext-115 cl1 size-213 p-t-18">contact@example.com</p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
     <jsp:include page="footer.jsp" />
   </body>
 
+  <script defer src="../assets/CustomJS/ajax.js"></script>
+  <!--===============================================================================================-->
+  <script defer src="../assets/js/sessionStatus.js"></script>
   <!--===============================================================================================-->
   <script src="../assets/vendor/jquery/jquery-3.2.1.min.js"></script>
   <!--===============================================================================================-->
@@ -229,9 +340,10 @@
       });
     });
   </script>
+
   <!--===============================================================================================-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-  <script src="../assets/js/map-custom.js"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+  <script src="../assets/js/map-custom.js"></script> -->
   <!--===============================================================================================-->
   <script src="../assets/js/main.js"></script>
 </html>

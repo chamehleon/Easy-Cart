@@ -24,21 +24,18 @@ public class FrontController extends HttpServlet {
         System.out.println(" Controller is: " + controllerName);
         System.out.println(request.getPathInfo());
         System.out.println(request.getRequestURI());
-        System.out.println(request);
         ControllerFactory factory = ControllerFactory.getInstance();
         IController controller = factory.getController(controllerName);
         ViewResolver resolver = controller.resolve(request, response);
         try {
             dispatch(request, response, resolver);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
 
     private void dispatch(final HttpServletRequest request, final HttpServletResponse response,
-                          final ViewResolver resolver) throws ServletException, IOException{
+                          final ViewResolver resolver) throws ServletException, IOException {
         String view = resolver.getView();
         switch (resolver.getResolveAction()) {
             case FORWARD:
@@ -52,6 +49,10 @@ public class FrontController extends HttpServlet {
             case REDIRECT:
                 response.sendRedirect(view);
                 break;
+            case JSON:
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(view);
             default:
                 break;
         }
