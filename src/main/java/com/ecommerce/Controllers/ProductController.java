@@ -44,7 +44,7 @@ public class ProductController implements IController {
 
                 // Set the JSON data as a request attribute
                 request.setAttribute("products", products);
-                request.setAttribute("image","https://i.postimg.cc/TPVBgby6/zz.png");
+               // request.setAttribute("image","https://i.postimg.cc/TPVBgby6/zz.png");
 
                 // Forward to product.jsp
                 resolver.forward(ResourcePathMapper.PAGE_PRODUCT.getPath());

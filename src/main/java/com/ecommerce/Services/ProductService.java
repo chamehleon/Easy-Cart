@@ -14,4 +14,11 @@ public class ProductService {
             return productDAO.findAll(em);
         }));
     }
+
+    public static Optional<Product> getProductById(int productId){
+        return Optional.ofNullable(JpaTransactionManager.doInTransaction(em -> {
+            ProductDAO productDAO = new ProductDAO();
+            return productDAO.findById(productId, em);
+        }));
+    }
 }
