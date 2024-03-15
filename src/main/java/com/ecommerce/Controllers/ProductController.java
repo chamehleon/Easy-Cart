@@ -39,11 +39,12 @@ public class ProductController implements IController {
                 List<Product> products = optionalProducts.orElse(Collections.emptyList());
 
                 // Convert the list of products to JSON
-                Gson gson = new Gson();
-                String json = gson.toJson(products);
+//                Gson gson = new Gson();
+//                String json = gson.toJson(products.get(0));
 
                 // Set the JSON data as a request attribute
-                request.setAttribute("productsJson", json);
+                request.setAttribute("products", products);
+                request.setAttribute("image","https://i.postimg.cc/TPVBgby6/zz.png");
 
                 // Forward to product.jsp
                 resolver.forward(ResourcePathMapper.PAGE_PRODUCT.getPath());

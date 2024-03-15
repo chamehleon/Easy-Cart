@@ -28,6 +28,7 @@ public class ControllerFactory {
                 return CheckEmailServlet.getInstance();
             case "FetchProducts":
                 return ProductController.getInstance();
+
             default:
         }
         return null;
