@@ -12,7 +12,7 @@
           <a href="#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a>
 
           <a href="#" class="flex-c-m trans-04 p-lr-25"> My Account </a>
-
+            <a href="?controller=AdminController" class="flex-c-m trans-04 p-lr-25"> Admin Panel </a>
           <a href="#" class="flex-c-m trans-04 p-lr-25"> EN </a>
 
           <a href="#" class="flex-c-m trans-04 p-lr-25"> USD </a>
@@ -58,6 +58,11 @@
 			  <li class="${param.active == 'contact' ? 'active-menu' : ''}">
 				<a href="front?controller=ContactController">Contact</a>
 			  </li>
+
+        <li class="${param.active == 'admin' ? 'active-menu' : ''}">
+          <a href="front?controller=AdminController">Admin</a>
+          </li>
+
           </ul>
         </div>
 

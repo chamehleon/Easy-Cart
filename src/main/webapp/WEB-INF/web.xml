@@ -3,6 +3,17 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
+<!--    <filter>-->
+<!--        <filter-name>ResourcesFilter</filter-name>-->
+<!--        <filter-class>com.ecommerce.Filters.ResourcesFilter</filter-class>-->
+<!--    </filter>-->
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>ResourcesFilter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+
     <servlet>
         <servlet-name>FrontController</servlet-name>
         <servlet-class>com.ecommerce.Controllers.FrontController.FrontController</servlet-class>
@@ -15,7 +26,7 @@
 
     <welcome-file-list>
         <welcome-file>
-            index.html
+            index.jsp
         </welcome-file>
     </welcome-file-list>
 

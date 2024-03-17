@@ -24,6 +24,7 @@ public class FrontController extends HttpServlet {
         System.out.println(" Controller is: " + controllerName);
         System.out.println(request.getPathInfo());
         System.out.println(request.getRequestURI());
+
         ControllerFactory factory = ControllerFactory.getInstance();
         IController controller = factory.getController(controllerName);
         ViewResolver resolver = controller.resolve(request, response);
@@ -37,6 +38,7 @@ public class FrontController extends HttpServlet {
     private void dispatch(final HttpServletRequest request, final HttpServletResponse response,
                           final ViewResolver resolver) throws ServletException, IOException {
         String view = resolver.getView();
+        System.out.println("VIEWWWWWWWWW" + view);
         switch (resolver.getResolveAction()) {
             case FORWARD:
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(view);
