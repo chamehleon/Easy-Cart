@@ -4,6 +4,7 @@ import com.ecommerce.Controllers.FrontController.IController;
 import com.ecommerce.Controllers.FrontController.ViewResolver;
 //import com.ecommerce.Services.RegisterService;
 import com.ecommerce.Persistence.DTOs.CustomerDTO;
+import com.ecommerce.Persistence.Entities.Customer;
 import com.ecommerce.Services.CustomerService;
 import com.ecommerce.Utils.PasswordHashing;
 import com.ecommerce.Utils.ResourcePathMapper;
@@ -43,7 +44,7 @@ public class RegisterController implements IController {
                 String hashedPassword = PasswordHashing.hashPassword(password);
 
                 LocalDate birthdate = LocalDate.now();
-                CustomerDTO customerDTO = new CustomerDTO(
+                Customer customer = new Customer(
                         username,
                         birthdate,
                         hashedPassword,
@@ -56,8 +57,9 @@ public class RegisterController implements IController {
                         "none",
                         "none"
                 );
+                //TODO customerdto 5aleeh customer entity
 
-                boolean registeredSuccessfully = CustomerService.register(customerDTO);
+                boolean registeredSuccessfully = CustomerService.register(customer);
                 if (registeredSuccessfully) {
                     System.out.println("registeredSuccessfully = true");
                     resolver.forward(ResourcePathMapper.PAGE_PRODUCT.getPath());

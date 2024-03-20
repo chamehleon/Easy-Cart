@@ -5,16 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c684136-d234-410e-9658-376878f7ff9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/UpdateCartItemQuantityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ViewCartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartItemDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartProducts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/updateCartItemQuantity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/FrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/icons/logo-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/icons/logo-01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/images/icons/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/images/icons/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/blog-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/blog-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/blog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home-02.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/home-02.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home-03.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/product-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/product-detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shoping-cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shoping-cart.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,17 +77,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dao-layer&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/Easy-Cart/v2/Easy-Cart&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "admin",
+    "last_opened_file_path": "C:/Users/Lenovo/Desktop/tomcat/SOAP",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\Easy-Cart\v2\Easy-Cart\src\main\webapp\assets\customJS" />
       <recent name="C:\Users\Lenovo\Desktop\Easy-Cart\Easy-Cart\src\main\webapp\assets\customJS" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -119,5 +144,9 @@
       <updated>1710299918649</updated>
     </task>
     <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

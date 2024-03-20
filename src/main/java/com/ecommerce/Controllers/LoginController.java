@@ -51,11 +51,16 @@ public class LoginController implements IController {
         String password = (String) req.getParameter("password");
         CustomerDTO customerDTO = CustomerService.findUserByEmail(email);
         boolean correctPassword = PasswordHashing.checkPassword(password, customerDTO.getPassword());
-
+        System.out.println("From LoginController: " + customerDTO.toString());
         if(customerDTO != null && correctPassword ){
             HttpSession session = req.getSession(true);
             session.setAttribute("currentUser", customerDTO);
-            resolver.forward(ResourcePathMapper.PAGE_HOME.getPath());
+            if (customerDTO.getEmail().equals("ee")) {
+                System.out.println("ANA ADMIN");
+                resolver.forward(ResourcePathMapper.PAGE_ADMIN.getPath());
+            } else {
+                resolver.forward(ResourcePathMapper.PAGE_HOME.getPath());
+            }
         }else {
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");

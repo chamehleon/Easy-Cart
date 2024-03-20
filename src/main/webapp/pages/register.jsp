@@ -3,86 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.png" />
+    <!--===============================================================================================-->
     <link
-      rel="icon"
-      type="image/png"
-      href="../assets/images/icons/favicon.png"
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+      href="assets/fonts/iconic/css/material-design-iconic-font.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/fonts/iconic/css/material-design-iconic-font.min.css"
+      href="assets/fonts/linearicons-v1.0.0/icon-font.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/fonts/linearicons-v1.0.0/icon-font.min.css"
+      href="assets/vendor/animate/animate.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/animate/animate.css"
+      href="assets/vendor/css-hamburgers/hamburgers.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/css-hamburgers/hamburgers.min.css"
+      href="assets/vendor/animsition/css/animsition.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/animsition/css/animsition.min.css"
+      href="assets/vendor/select2/select2.min.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/select2/select2.min.css"
+      href="assets/vendor/daterangepicker/daterangepicker.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/daterangepicker/daterangepicker.css"
+      href="assets/vendor/slick/slick.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/slick/slick.css"
+      href="assets/vendor/MagnificPopup/magnific-popup.css"
     />
     <!--===============================================================================================-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="../assets/vendor/MagnificPopup/magnific-popup.css"
+      href="assets/vendor/perfect-scrollbar/perfect-scrollbar.css"
     />
     <!--===============================================================================================-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../assets/vendor/perfect-scrollbar/perfect-scrollbar.css"
-    />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/util.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/util.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <!--===============================================================================================-->
     <title>User Registration</title>
     <style>
@@ -116,7 +112,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -130,7 +126,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -143,7 +139,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -156,7 +152,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -169,7 +165,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -182,7 +178,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -195,7 +191,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -208,7 +204,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -221,7 +217,7 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
               </div>
@@ -234,15 +230,9 @@
                 />
                 <img
                   class="how-pos4 pointer-none"
-                  src="../assets/images/icons/icon-email.png"
+                  src="assets/images/icons/icon-email.png"
                   alt="ICON"
                 />
-              </div>
-              <div class="text-center p-t-50 p-b-20">
-                <span class="txt1">Already have an account?</span>
-                <a class="txt1 bo1 hov1" href="?controller=LoginController"
-                  >Sign in</a
-                >
               </div>
 
               <button
@@ -250,6 +240,12 @@
               >
                 REGISTER
               </button>
+              <div class="text-center p-t-30 p-b-20">
+                <span class="txt1">Already have an account?</span>
+                <a class="txt1 bo1 hov1" href="?controller=LoginController"
+                  >Sign in</a
+                >
+              </div>
             </form>
           </div>
 
@@ -301,18 +297,18 @@
     <jsp:include page="footer.jsp" />
   </body>
 
-  <script defer src="../assets/CustomJS/ajax.js"></script>
+  <script defer src="assets/CustomJS/ajax.js"></script>
   <!--===============================================================================================-->
-  <script defer src="../assets/js/sessionStatus.js"></script>
+  <script defer src="assets/js/sessionStatus.js"></script>
   <!--===============================================================================================-->
-  <script src="../assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
   <!--===============================================================================================-->
-  <script src="../assets/vendor/animsition/js/animsition.min.js"></script>
+  <script src="assets/vendor/animsition/js/animsition.min.js"></script>
   <!--===============================================================================================-->
-  <script src="../assets/vendor/bootstrap/js/popper.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/popper.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <!--===============================================================================================-->
-  <script src="../assets/vendor/select2/select2.min.js"></script>
+  <script src="assets/vendor/select2/select2.min.js"></script>
   <script>
     $(".js-select2").each(function () {
       $(this).select2({
@@ -322,9 +318,9 @@
     });
   </script>
   <!--===============================================================================================-->
-  <script src="../assets/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+  <script src="assets/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
   <!--===============================================================================================-->
-  <script src="../assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="assets/vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <script>
     $(".js-pscroll").each(function () {
       $(this).css("position", "relative");
@@ -343,7 +339,7 @@
 
   <!--===============================================================================================-->
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-  <script src="../assets/js/map-custom.js"></script> -->
+  <script src="assets/js/map-custom.js"></script> -->
   <!--===============================================================================================-->
-  <script src="../assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </html>

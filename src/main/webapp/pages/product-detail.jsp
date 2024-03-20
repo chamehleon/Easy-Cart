@@ -86,6 +86,78 @@ import="com.ecommerce.Persistence.Entities.Product" %>
     <link rel="stylesheet" type="text/css" href="assets/css/util.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <!--===============================================================================================-->
+
+    <script>
+      function addToCartMethod(
+        productName,
+        productPrice,
+        productDescription,
+        quantity
+      ) {
+        // Create an object with product information
+        var product = {
+          name: productName,
+          price: productPrice,
+          description: productDescription,
+          quantity: quantity,
+        };
+
+        // Retrieve existing list from local storage
+        var existingCart = localStorage.getItem("cartProducts");
+
+        // If no existing list, create a new array
+        var cartProducts = existingCart ? JSON.parse(existingCart) : [];
+
+        // Check if the product already exists in the cart
+        var existingProductIndex = cartProducts.findIndex(function (p) {
+          return p.name === productName && p.description === productDescription;
+        });
+
+        if (existingProductIndex !== -1) {
+          // If the product already exists, update its quantity
+          cartProducts[existingProductIndex].quantity += quantity;
+        } else {
+          // If the product doesn't exist, add it to the cart
+          cartProducts.push(product);
+        }
+
+        // Convert the array to a JSON string
+        var cartProductsJSON = JSON.stringify(cartProducts);
+
+        // Update the local storage with the new JSON string
+        localStorage.setItem("cartProducts", cartProductsJSON);
+
+        // Optionally, you can provide feedback to the user
+        console.log("Product added to cart!");
+
+        // Call the function to load products to cart after adding the new product
+        loadProductsToCart();
+      }
+
+      // Attach the addToCartMethod function to the onclick event of the add-to-cart button
+      document.addEventListener("DOMContentLoaded", function () {
+        var addToCartButton = document.getElementById("add-to-cart-button");
+        if (addToCartButton) {
+          addToCartButton.onclick = function () {
+            // Get product information
+            var productName = "${product.productName}";
+            var productPrice = "${product.productPrice}";
+            var productDescription = "${product.productDescription}";
+            var quantity =
+              parseInt(document.querySelector(".num-product").value) || 1; // Get quantity from input, default to 1 if empty
+
+            addToCartMethod(
+              productName,
+              productPrice,
+              productDescription,
+              quantity
+            );
+          };
+        } else {
+          console.error("Add to cart button not found!");
+        }
+      });
+    </script>
   </head>
   <body class="animsition">
     <!-- Header -->
@@ -96,96 +168,7 @@ import="com.ecommerce.Persistence.Entities.Product" %>
     <br />
     <br />
     <!-- Cart -->
-    <div class="wrap-header-cart js-panel-cart">
-      <div class="s-full js-hide-cart"></div>
-
-      <div class="header-cart flex-col-l p-l-65 p-r-25">
-        <div class="header-cart-title flex-w flex-sb-m p-b-8">
-          <span class="mtext-103 cl2"> Your Cart </span>
-
-          <div
-            class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart"
-          >
-            <i class="zmdi zmdi-close"></i>
-          </div>
-        </div>
-
-        <div class="header-cart-content flex-w js-pscroll">
-          <ul class="header-cart-wrapitem w-full">
-            <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
-                <img src="assets/images/item-cart-01.jpg" alt="IMG" />
-              </div>
-
-              <div class="header-cart-item-txt p-t-8">
-                <a
-                  href="#"
-                  class="header-cart-item-name m-b-18 hov-cl1 trans-04"
-                >
-                  White Shirt Pleat
-                </a>
-
-                <span class="header-cart-item-info"> 1 x $19.00 </span>
-              </div>
-            </li>
-
-            <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
-                <img src="assets/images/item-cart-02.jpg" alt="IMG" />
-              </div>
-
-              <div class="header-cart-item-txt p-t-8">
-                <a
-                  href="#"
-                  class="header-cart-item-name m-b-18 hov-cl1 trans-04"
-                >
-                  Converse All Star
-                </a>
-
-                <span class="header-cart-item-info"> 1 x $39.00 </span>
-              </div>
-            </li>
-
-            <li class="header-cart-item flex-w flex-t m-b-12">
-              <div class="header-cart-item-img">
-                <img src="assets/images/item-cart-03.jpg" alt="IMG" />
-              </div>
-
-              <div class="header-cart-item-txt p-t-8">
-                <a
-                  href="#"
-                  class="header-cart-item-name m-b-18 hov-cl1 trans-04"
-                >
-                  Nixon Porter Leather
-                </a>
-
-                <span class="header-cart-item-info"> 1 x $17.00 </span>
-              </div>
-            </li>
-          </ul>
-
-          <div class="w-full">
-            <div class="header-cart-total w-full p-tb-40">Total: $75.00</div>
-
-            <div class="header-cart-buttons flex-w w-full">
-              <a
-                href="shoping-cart.html"
-                class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"
-              >
-                View Cart
-              </a>
-
-              <a
-                href="shoping-cart.html"
-                class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"
-              >
-                Check Out
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <jsp:include page="viewCart.jsp" />
 
     <!-- breadcrumb -->
     <div class="container">
@@ -346,19 +329,24 @@ import="com.ecommerce.Persistence.Entities.Product" %>
                     </div>
 
                     <c:choose>
-                    <c:when test="${sessionScope.currentUser != null}">
-                        <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
-                                onclick="console.log('sdada');">
-                            Add to cart
+                      <c:when test="${sessionScope.currentUser != null}">
+                        <button
+                          id="add-to-cart-button"
+                          class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
+                        >
+                          Add to cart
                         </button>
-                    </c:when>
-                    <c:otherwise>
-                        <button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
-                                onclick="console.log('iam log in Cart');">
-                            Add to cart
+                      </c:when>
+                      <c:otherwise>
+                        <button
+                          id="add-to-cart-button"
+                          class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
+                          onclick="console.log('mfesh session');"
+                        >
+                          Add to cart
                         </button>
-                    </c:otherwise>
-                  </c:choose>
+                      </c:otherwise>
+                    </c:choose>
                   </div>
                 </div>
               </div>

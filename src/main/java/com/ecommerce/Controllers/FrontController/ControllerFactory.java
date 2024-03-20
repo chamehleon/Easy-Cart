@@ -18,8 +18,8 @@ public class ControllerFactory {
 
     public IController getController(final String controllerName) {
         switch (controllerName) {
-            case "Cart":
-                return CartController.getInstance();
+            case "HomeController":
+                return HomeController.getInstance();
             case "RegisterController":
                 return RegisterController.getInstance();
             case "LoginController":
@@ -32,6 +32,10 @@ public class ControllerFactory {
                 return ProductDetailController.getInstance();
             case "AdminController":
                 return AdminController.getInstance();
+            case "ViewCartController":
+                return ViewCartController.getInstance();
+            case "UpdateCartItemQuantityController":
+                return UpdateCartItemQuantityController.getInstance();
             default:
         }
         return null;

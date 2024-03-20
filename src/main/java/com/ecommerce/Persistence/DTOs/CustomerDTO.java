@@ -11,6 +11,7 @@ import java.time.LocalDate;
  */
 @Value
 public class CustomerDTO implements Serializable {
+    Integer id;
     String customerName;
     LocalDate birthday;
     String password;
@@ -22,4 +23,6 @@ public class CustomerDTO implements Serializable {
     String streetNo;
     String streetName;
     String interests;
+
+
 }

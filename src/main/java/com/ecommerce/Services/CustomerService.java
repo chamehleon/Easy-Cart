@@ -10,9 +10,9 @@ import java.util.Optional;
 
 public class CustomerService {
 
-    public static boolean register(CustomerDTO customerDTO) {
+    public static boolean register(Customer customer) {
         CustomerDAO customerDAO = new CustomerDAO();
-        Customer customer = CustomerMapper.INSTANCE.toEntity(customerDTO);
+        //Customer customer = CustomerMapper.INSTANCE.toEntity(customerDTO);
         boolean isRegistered = JpaTransactionManager.doInTransaction(em -> customerDAO.create(customer, em));
         return isRegistered;
     }

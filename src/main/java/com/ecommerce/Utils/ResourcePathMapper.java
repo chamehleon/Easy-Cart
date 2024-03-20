@@ -1,10 +1,10 @@
 package com.ecommerce.Utils;
 
 public enum ResourcePathMapper {
-    PAGE_HOME("/index.html"),
+    PAGE_HOME("/index.jsp"),
     PAGE_LOGIN("/pages/login.jsp"),
     PAGE_REGISTER("/pages/register.jsp"),
-    PAGE_CART("/pages/shoping-cart.html"),
+    PAGE_CART("/pages/shoping-cart.jsp"),
     PAGE_PRODUCT("/pages/product.jsp"),
     PAGE_PRODUCT_DETAIL("/pages/product-detail.jsp"),
     PAGE_CHECKOUT("/pages/checkout.jsp"),

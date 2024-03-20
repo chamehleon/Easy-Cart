@@ -11,11 +11,16 @@
         <div class="right-top-bar flex-w h-full">
           <a href="#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a>
 
-          <a href="#" class="flex-c-m trans-04 p-lr-25"> My Account </a>
-            <a href="?controller=AdminController" class="flex-c-m trans-04 p-lr-25"> Admin Panel </a>
-          <a href="#" class="flex-c-m trans-04 p-lr-25"> EN </a>
+          <a href="front?controller=RegisterController" class="flex-c-m trans-04 p-lr-25"> My Account </a>
+          <a
+            href="front?controller=AdminController"
+            class="flex-c-m trans-04 p-lr-25"
+          >
+            Admin Panel
+          </a>
+          <a href="" class="flex-c-m trans-04 p-lr-25"> EN </a>
 
-          <a href="#" class="flex-c-m trans-04 p-lr-25"> USD </a>
+          <a href="" class="flex-c-m trans-04 p-lr-25"> USD </a>
         </div>
       </div>
     </div>
@@ -24,19 +29,23 @@
       <nav class="limiter-menu-desktop container">
         <!-- Logo desktop -->
         <a href="#" class="logo">
-          <img src="assets/images/icons/logo-01.png" alt="IMG-LOGO" />
+          <img src="assets/images/icons/dd.png" alt="IMG-LOGO" />
         </a>
 
         <!-- Menu desktop -->
         <div class="menu-desktop">
           <ul class="main-menu">
-            <li>
+            <!-- <li>
               <a href="../index.html">Home</a>
               <ul class="sub-menu">
                 <li><a href="../index.html">Homepage 1</a></li>
                 <li><a href="home-02.html">Homepage 2</a></li>
                 <li><a href="home-03.html">Homepage 3</a></li>
               </ul>
+            </li> -->
+
+            <li class="${param.active == 'home' ? 'active-menu' : ''}">
+              <a href="front?controller=HomeController">Home</a>
             </li>
 
             <li class="${param.active == 'shop' ? 'active-menu' : ''}">
@@ -48,21 +57,20 @@
             </li>
 
             <li class="${param.active == 'blog' ? 'active-menu' : ''}">
-				<a href="front?controller=BlogController">Blog</a>
-			  </li>
+              <a href="front?controller=BlogController">Blog</a>
+            </li>
 
-			  <li class="${param.active == 'about' ? 'active-menu' : ''}">
-				<a href="front?controller=AboutController">About</a>
-			  </li>
+            <li class="${param.active == 'about' ? 'active-menu' : ''}">
+              <a href="front?controller=AboutController">About</a>
+            </li>
 
-			  <li class="${param.active == 'contact' ? 'active-menu' : ''}">
-				<a href="front?controller=ContactController">Contact</a>
-			  </li>
+            <li class="${param.active == 'contact' ? 'active-menu' : ''}">
+              <a href="front?controller=ContactController">Contact</a>
+            </li>
 
-        <li class="${param.active == 'admin' ? 'active-menu' : ''}">
-          <a href="front?controller=AdminController">Admin</a>
-          </li>
-
+            <li class="${param.active == 'admin' ? 'active-menu' : ''}">
+              <a href="front?controller=AdminController">Admin</a>
+            </li>
           </ul>
         </div>
 
@@ -210,4 +218,6 @@
       </form>
     </div>
   </div>
+    <script defer src="assets/customJS/cartProducts.js"></script>
+
 </header>

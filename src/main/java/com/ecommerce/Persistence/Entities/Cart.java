@@ -14,10 +14,11 @@ import lombok.ToString;
 @Table(name = "cart", schema = "ecommerce")
 public class Cart {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cart_id", nullable = false)
     private Integer id;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @OneToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
