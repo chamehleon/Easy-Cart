@@ -21,4 +21,15 @@ public class ProductService {
             return productDAO.findById(productId, em);
         }));
     }
+    // create a new product
+    public static Boolean createProduct(Product product){
+        return JpaTransactionManager.doInTransaction(em -> {
+            ProductDAO productDAO = new ProductDAO();
+            return productDAO.create(product, em);
+        });
+    }
+
+    // get product by id
+
+
 }

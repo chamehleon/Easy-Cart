@@ -1,16 +1,10 @@
-package com.ecommerce.Controllers;
+package com.ecommerce.Controllers.AdminControllers;
 
 import com.ecommerce.Controllers.FrontController.IController;
 import com.ecommerce.Controllers.FrontController.ViewResolver;
-import com.ecommerce.Persistence.DTOs.CustomerDTO;
-import com.ecommerce.Services.CustomerService;
-import com.ecommerce.Utils.PasswordHashing;
 import com.ecommerce.Utils.ResourcePathMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public class AdminController implements IController {
 

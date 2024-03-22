@@ -16,6 +16,11 @@ public enum ResourcePathMapper {
     PAGE_ABOUT("/pages/about.html"),
 
     PAGE_ADMIN("/pages/admin/index.jsp"),
+    PAGE_ADMIN_PRODUCT("/pages/admin/products.jsp"),
+
+
+    PAGE_ADMIN_ADD_PRODUCT("/pages/admin/add-product.jsp"),
+    PAGE_ADMIN_VIEW_PRODUCT("/pages/admin/edit-product.jsp"),
 
     PAGE_ERROR("/pages/error.html");
 
