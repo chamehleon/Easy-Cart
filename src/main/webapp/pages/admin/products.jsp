@@ -47,8 +47,9 @@
                   </tr>
                 </thead>
                 <tbody>
+
                 <c:forEach var="product" items="${products}">
-                  <tr data-id="${product.id}"  data-href = "front?controller=AdminViewProductController&id=${product.id}">
+                  <tr data-id="${product.id}"  data-href = "front?controller=AdminUpdateProductController&id=${product.id}">
                     <th scope="row"><input type="checkbox" /></th>
                     <td class="tm-product-name">${product.productName}</td>
                     <td>${product.stockQuantity}</td>

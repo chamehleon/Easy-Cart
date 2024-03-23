@@ -25,6 +25,11 @@ a:hover {
 button:focus {
   outline: 0;
 }
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navbar-brand {
   display: flex;
   align-items: center;

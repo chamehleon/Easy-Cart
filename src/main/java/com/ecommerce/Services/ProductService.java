@@ -29,7 +29,13 @@ public class ProductService {
         });
     }
 
-    // get product by id
+    // update product details
+    public static Optional<Product> updateProduct(Product product){
+        return Optional.ofNullable(JpaTransactionManager.doInTransaction(em -> {
+            ProductDAO productDAO = new ProductDAO();
+            return productDAO.update(product, em);
+        }));
+    }
 
 
 }

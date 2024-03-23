@@ -14,15 +14,15 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class AdminProductController implements IController {
-    private static AdminProductController instance;
+public class AdminProductsController implements IController {
+    private static AdminProductsController instance;
 
-    private AdminProductController() {
+    private AdminProductsController() {
     }
 
-    public static AdminProductController getInstance() {
+    public static AdminProductsController getInstance() {
         if (instance == null) {
-            instance = new AdminProductController();
+            instance = new AdminProductsController();
         }
         return instance;
     }

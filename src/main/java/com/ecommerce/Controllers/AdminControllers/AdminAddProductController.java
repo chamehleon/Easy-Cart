@@ -64,24 +64,16 @@ public class AdminAddProductController implements IController {
                 product.setCategory(category1.get());
                 product.setStockQuantity(Integer.parseInt(stock));
 
-                addProductImage(product, (String) request.getParameter("image1"));
-                addProductImage(product, (String) request.getParameter("image2"));
-                addProductImage(product, (String) request.getParameter("image3"));
+                product.addProductImage((String) request.getParameter("image1"));
+                product.addProductImage((String) request.getParameter("image2"));
+                product.addProductImage((String) request.getParameter("image3"));
 
 
                 ProductService.createProduct(product);
-                Optional<List<Product>> optionalProducts = ProductService.getAllProducts();
-                List<Product> products = optionalProducts.orElse(Collections.emptyList());
-                request.setAttribute("products", products);
-
-                Optional<List<Category>> optionalCategories = CategoryService.getAllCategories();
-                List<Category> categories = optionalCategories.orElse(Collections.emptyList());
-                request.setAttribute("categories", categories);
 
 
 
-
-                resolver.forward(ResourcePathMapper.PAGE_ADMIN_PRODUCT.getPath());
+                resolver.redirect(ResourcePathMapper.ADMIN_PRODUCT_CONTROLLER.getPath());
 
 
 
@@ -96,10 +88,10 @@ public class AdminAddProductController implements IController {
         }
         return resolver;
     }
-    private void addProductImage(Product product, String imageUrl) {
-        ProductImage productImage = new ProductImage();
-        productImage.setImageUrl(imageUrl);
-        productImage.setProduct(product);
-        product.getProductImages().add(productImage);
-    }
+//    private void addProductImage(Product product, String imageUrl) {
+//        ProductImage productImage = new ProductImage();
+//        productImage.setImageUrl(imageUrl);
+//        productImage.setProduct(product);
+//        product.getProductImages().add(productImage);
+//    }
 }

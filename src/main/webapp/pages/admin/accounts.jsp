@@ -1,3 +1,10 @@
+<jsp:useBean id="customers" scope="request" type="java.util.List"/>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page
+        language="java" contentType="text/html; charset=ISO-8859-1"
+        pageEncoding="ISO-8859-1"%>
+<%@ page import="com.ecommerce.Persistence.Entities.Customer" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,20 +32,41 @@
     <div class="" id="home">
       <jsp:include page="header.jsp" />
       <div class="container mt-5">
-        <div class="row tm-content-row">
-          <div class="col-12 tm-block-col">
-            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
-              <h2 class="tm-block-title">List of Accounts</h2>
-              <p class="text-white">Accounts</p>
-              <select class="custom-select">
-                <option value="0">Select account</option>
-                <option value="1">Admin</option>
-                <option value="2">Editor</option>
-                <option value="3">Merchant</option>
-                <option value="4">Customer</option>
-              </select>
-            </div>
-          </div>
+        <div class="tm-product-table-container">
+          <table class="table table-hover tm-table-small tm-product-table">
+            <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col">Customer name</th>
+              <th scope="col">Birthday</th>
+              <th scope="col">job</th>
+              <th scope="col">email</th>
+              <th scope="col">Credit Limit</th>
+              <th scope="col">City</th>
+
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <c:forEach var="customer" items="${customers}">
+              <tr>
+                <th scope="row"><input type="checkbox" /></th>
+                <td class="tm-product-name">${customer.customerName}</td>
+                <td>${customer.birthday}</td>
+                <td>${customer.job}</td>
+                <td>${customer.email}</td>
+                <td>${customer.creditLimit}</td>
+                <td>${customer.city}</td>
+                <td class="center-button">
+                  <a href="front?controller=AdminOrderHistoryController&customerId=${customer.id}" class="btn btn-primary btn-small text-uppercase mb-3">
+                    Get Order History
+                  </a>
+                </td>
+              </tr>
+            </c:forEach>
+            </tbody>
+          </table>
         </div>
         <!-- row -->
         <div class="row tm-content-row">

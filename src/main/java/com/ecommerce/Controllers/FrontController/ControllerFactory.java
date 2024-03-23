@@ -1,10 +1,7 @@
 package com.ecommerce.Controllers.FrontController;
 
 import com.ecommerce.Controllers.*;
-import com.ecommerce.Controllers.AdminControllers.AdminAddProductController;
-import com.ecommerce.Controllers.AdminControllers.AdminController;
-import com.ecommerce.Controllers.AdminControllers.AdminProductController;
-import com.ecommerce.Controllers.AdminControllers.AdminViewProductController;
+import com.ecommerce.Controllers.AdminControllers.*;
 
 public class ControllerFactory {
     private static ControllerFactory instance;
@@ -39,12 +36,16 @@ public class ControllerFactory {
                 return UpdateCartItemQuantityController.getInstance();
             case "AdminController":
                 return AdminController.getInstance();
-            case "AdminProductController":
-                return AdminProductController.getInstance();
+            case "AdminProductsController":
+                return AdminProductsController.getInstance();
             case "AdminAddProductController":
                 return AdminAddProductController.getInstance();
-            case "AdminViewProductController":
-                return AdminViewProductController.getInstance();
+            case "AdminUpdateProductController":
+                return AdminUpdateProductController.getInstance();
+            case "AdminAccountsController":
+                return AdminAccountsController.getInstance();
+            case "AdminOrderHistoryController":
+                return AdminOrderHistoryController.getInstance();
             default:
         }
         return null;

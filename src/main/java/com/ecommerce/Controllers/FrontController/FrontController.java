@@ -49,6 +49,9 @@ public class FrontController extends HttpServlet {
                 includeDispatcher.include(request, response);
                 break;
             case REDIRECT:
+                String contextPath = request.getContextPath();
+                System.out.println("context path: " + contextPath);
+                view = contextPath + "/front?controller=" +view;
                 response.sendRedirect(view);
                 break;
             case JSON:

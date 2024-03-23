@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <nav class="navbar navbar-expand-xl">
     <div class="container h-100">
         <a class="navbar-brand" href="front?controller=AdminController">
@@ -41,14 +42,14 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="front?controller=AdminProductController">
+                    <a class="nav-link" href="front?controller=AdminProductsController">
                         <i class="fas fa-shopping-cart"></i>
                         Products
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="front?controller=AccountsController">
+                    <a class="nav-link" href="front?controller=AdminAccountsController">
                         <i class="far fa-user"></i>
                         Accounts
                     </a>
@@ -77,5 +78,6 @@
             </ul>
         </div>
     </div>
+
 
 </nav>

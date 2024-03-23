@@ -26,4 +26,8 @@ public class Order {
     @Column(name = "ordered_at", nullable = false)
     private Instant orderedAt;
 
+    // get order items of this order function
+
+
+
 }

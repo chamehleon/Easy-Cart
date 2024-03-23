@@ -55,4 +55,11 @@ public class Product {
 
     @OneToMany(mappedBy = "product", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<ProductImage> productImages = new LinkedList<>();
+
+    public void addProductImage(String imageUrl) {
+        ProductImage productImage = new ProductImage();
+        productImage.setImageUrl(imageUrl);
+        productImage.setProduct(this);
+        this.getProductImages().add(productImage);
+    }
 }

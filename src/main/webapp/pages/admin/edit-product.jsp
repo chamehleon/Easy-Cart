@@ -43,20 +43,27 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form action="" method="post" class="tm-edit-product-form">
+                <form action="front?controller=AdminUpdateProductController&id=${product.id}" method="post" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                     <label
                       for="name"
                       >Product Name
                     </label>
-                    <p data-large-mode="true" id="name" name="name" class="form-control">${product.productName}</p>
+                    <input
+                            id="name"
+                            name="productName"
+                            type="text"
+                            value="${product.productName}"
+                            class="form-control validate"
+                    />
                   </div>
                   <div class="form-group mb-3">
                     <label
                       for="description"
                       >Description</label
                     >
-                    <textarea                    
+                    <textarea
+                            name = "productDescription"
                       class="form-control validate tm-small"
                       rows="5"
                       required
@@ -64,11 +71,17 @@
                     >${product.productDescription}</textarea>
                   </div>
                   <div class="form-group mb-3">
-                    <label
-                      for="category"
-                      >Category</label
-                    >
-                    <p id="category" class="form-control">${product.category.categoryName}</p>
+                    <label for="category">Category</label>
+                    <select  name="productCategory" class="custom-select tm-select-accounts" id="category">
+                      <jsp:useBean id="categories" scope="request" type="java.util.List"/>
+                      <c:forEach var="category" items="${categories}">
+                        <option value="${category.id}"
+                                <c:if test="${category.id == product.category.id}">selected</c:if>
+                        >
+                            ${category.categoryName}
+                        </option>
+                      </c:forEach>
+                    </select>
                   </div>
                   <div class="row">
                       <div class="form-group mb-3 col-xs-12 col-sm-6">
@@ -76,36 +89,45 @@
                             for="price"
                             >Price
                           </label>
-                        <p data-large-mode="true" id="price" name="price" class="form-control">${product.productPrice}</p>
+                        <input
+                                id="price"
+                                name="productPrice"
+                                type="number"
+                                value="${product.productPrice}"
+                                class="form-control validate"
+                                data-large-mode="true"
+                        />
                         </div>
                         <div class="form-group mb-3 col-xs-12 col-sm-6">
                           <label
                             for="stock"
                             >Units In Stock
                           </label>
-                          <p data-large-mode="true" id="stock" name="stock" class="form-control">${product.stockQuantity}</p>
+                          <input
+                                  id="stock"
+                                  name="stockQuantity"
+                                  type="text"
+                                  value="${product.stockQuantity}"
+                                  class="form-control validate"
+                          />
                         </div>
                   </div>
                   
               </div>
-              <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                <div class="tm-product-img-edit mx-auto">
-                  <img src="${product.productImages[0].getImageUrl()}" alt="Product image" class="img-fluid d-block mx-auto">
-                  <i
-                    class="fas fa-cloud-upload-alt tm-upload-icon"
-                    onclick="document.getElementById('fileInput').click();"
-                  ></i>
+                <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
+                    <div class="form-group mb-3">
+                        <label for="image1">Image URL 1</label>
+                        <input value = "${product.productImages[0].getImageUrl()}" id="image1" name="image1" type="text" class="form-control validate" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="image2">Image URL 2</label>
+                        <input value = "${product.productImages[1].getImageUrl()}"id="image2" name="image2" type="text" class="form-control validate" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="image3">Image URL 3</label>
+                        <input value ="${product.productImages[2].getImageUrl()}" id="image3" name="image3" type="text" class="form-control validate" />
+                    </div>
                 </div>
-                <div class="custom-file mt-3 mb-3">
-                  <input id="fileInput" type="file" style="display:none;" />
-                  <input
-                    type="button"
-                    class="btn btn-primary btn-block mx-auto"
-                    value="CHANGE IMAGE NOW"
-                    onclick="document.getElementById('fileInput').click();"
-                  />
-                </div>
-              </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary btn-block text-uppercase">Update Now</button>
               </div>
