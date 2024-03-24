@@ -91,13 +91,14 @@
   </head>
   <body>
     <jsp:include page="header.jsp" />
+    <jsp:include page="viewCart.jsp" />
     <section class="bg0 p-t-104 p-b-116">
       <div class="container">
         <div class="flex-w flex-tr custom">
           <div
             class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md"
           >
-            <form method="post" action="front?controller=LoginController">
+            <form method="post" onsubmit="login(event)">
               <h4 class="mtext-105 cl2 txt-center p-b-30">LOGIN</h4>
 
               <div class="bor8 m-b-20 how-pos4-parent">
@@ -105,6 +106,7 @@
                   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
                   type="text"
                   name="email"
+                  id="email"
                   placeholder="Your Email Address"
                 />
                 <img
@@ -118,6 +120,7 @@
                   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
                   type="password"
                   name="password"
+                  id="password"
                   placeholder="Your Password"
                 />
                 <img
@@ -150,7 +153,7 @@
   </body>
 
   <!--===============================================================================================-->
-  <script defer src="assets/CustomerJS/sessionStatus.js"></script>
+  <script defer src="assets/customJS/sessionStatus.js"></script>
   <!--===============================================================================================-->
   <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script>
   <!--===============================================================================================-->
@@ -190,8 +193,6 @@
   </script>
 
   <!--===============================================================================================-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-  <script src="assets/js/map-custom.js"></script>
-  <!--===============================================================================================-->
-  <script src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/customJS/login.js"></script>
 </html>

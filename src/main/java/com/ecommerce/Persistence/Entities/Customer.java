@@ -5,11 +5,12 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "customer", schema = "ecommerce")
 public class Customer {
@@ -50,6 +51,12 @@ public class Customer {
 
     @Column(name = "interests", nullable = false)
     private String interests;
+
+    @OneToOne(mappedBy = "customer")
+    private Cart cart;
+
+    @OneToMany(mappedBy = "customer")
+    private Set<Order> orders = new LinkedHashSet<>();
 
     public Customer(String customerName, LocalDate birthday, String password, String job, String email, BigDecimal creditLimit, String city, String country, String streetNo, String streetName, String interests) {
         this.customerName = customerName;

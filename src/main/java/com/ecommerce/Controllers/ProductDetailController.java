@@ -33,9 +33,9 @@ public class ProductDetailController implements IController {
             try {
                 String productId = request.getParameter("productId");
                 // Fetch product information using productId
-                Optional<Product> product = ProductService.getProductById(Integer.parseInt(productId));
+                Product product = ProductService.getProductById(Integer.parseInt(productId));
                 // Now you have the product object, you can use it as needed
-                request.setAttribute("product", product.get());
+                request.setAttribute("product", product);
                 resolver.forward(ResourcePathMapper.PAGE_PRODUCT_DETAIL.getPath());
             } catch (Exception e) {
                 e.printStackTrace();

@@ -10,11 +10,11 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Open+Sans -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/adminAssets/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/adminAssets/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="assets/adminAssets/css/templatemo-style.css" />
     <!--
 	Product Admin CSS Template
 	https://templatemo.com/tm-524-product-admin
@@ -158,15 +158,19 @@
     <footer class="tm-footer row tm-mt-small">
       <div class="col-12 font-weight-light">
         <p class="text-center text-white mb-0 px-4 small">
-          Copyright &copy; <b>2018</b> All rights reserved. 
-          
-          Design: <a rel="nofollow noopener" href="https://templatemo.com" class="tm-footer-link">Template Mo</a>
+          Copyright &copy; <b>2018</b> All rights reserved. Design:
+          <a
+            rel="nofollow noopener"
+            href="https://templatemo.com"
+            class="tm-footer-link"
+            >Template Mo</a
+          >
         </p>
       </div>
     </footer>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="assets/adminAssets/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="assets/adminAssets/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
   </body>
 </html>

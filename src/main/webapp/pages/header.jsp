@@ -11,7 +11,12 @@
         <div class="right-top-bar flex-w h-full">
           <a href="#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a>
 
-          <a href="front?controller=RegisterController" class="flex-c-m trans-04 p-lr-25"> My Account </a>
+          <a
+            href="front?controller=RegisterController"
+            class="flex-c-m trans-04 p-lr-25"
+          >
+            My Account
+          </a>
           <a
             href="front?controller=AdminController"
             class="flex-c-m trans-04 p-lr-25"
@@ -38,9 +43,6 @@
             <!-- <li>
               <a href="../index.html">Home</a>
               <ul class="sub-menu">
-                <li><a href="../index.html">Homepage 1</a></li>
-                <li><a href="home-02.html">Homepage 2</a></li>
-                <li><a href="home-03.html">Homepage 3</a></li>
               </ul>
             </li> -->
 
@@ -83,7 +85,7 @@
           </div>
 
           <div
-            class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+            class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart cart-count"
             data-notify="2"
           >
             <i class="zmdi zmdi-shopping-cart"></i>
@@ -105,8 +107,8 @@
   <div class="wrap-header-mobile">
     <!-- Logo moblie -->
     <div class="logo-mobile">
-      <a href="../index.html"
-        ><img src="../assets/images/icons/logo-01.png" alt="IMG-LOGO"
+      <a href="front?controller=HomeController"
+        ><img src="assets/images/icons/dd.png" alt="IMG-LOGO"
       /></a>
     </div>
 
@@ -119,7 +121,7 @@
       </div>
 
       <div
-        class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
+        class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart cart-count"
         data-notify="2"
       >
         <i class="zmdi zmdi-shopping-cart"></i>
@@ -166,37 +168,41 @@
 
     <ul class="main-menu-m">
       <li>
-        <a href="../index.html">Home</a>
-        <ul class="sub-menu-m">
+        <a href="front?controller=LoginController">Login</a>
+      </li>
+
+      <li>
+        <a href="front?controller=HomeController">Home</a>
+        <!-- <ul class="sub-menu-m">
           <li><a href="../index.html">Homepage 1</a></li>
           <li><a href="home-02.html">Homepage 2</a></li>
           <li><a href="home-03.html">Homepage 3</a></li>
-        </ul>
+        </ul> -->
         <span class="arrow-main-menu-m">
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </span>
       </li>
 
       <li>
-        <a href="product.html">Shop</a>
-      </li>
-
-      <li>
-        <a href="shoping-cart.html" class="label1 rs1" data-label1="hot"
-          >Features</a
+        <a
+          href="front?controller=FetchProducts"
+          class="label1 rs1"
+          data-label1="hot"
+        >
+          Shop</a
         >
       </li>
 
       <li>
-        <a href="blog.html">Blog</a>
+        <a href="front?controller=BlogController">Blog</a>
       </li>
 
       <li>
-        <a href="about.html">About</a>
+        <a href="front?controller=AboutController">About</a>
       </li>
 
       <li>
-        <a href="contact.html">Contact</a>
+        <a href="front?controller=ContactController">Contact</a>
       </li>
     </ul>
   </div>
@@ -207,7 +213,7 @@
       <button
         class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search"
       >
-        <img src="../assets/images/icons/icon-close2.png" alt="CLOSE" />
+        <img src="assets/images/icons/icon-close2.png" alt="CLOSE" />
       </button>
 
       <form class="wrap-search-header flex-w p-l-15">
@@ -218,6 +224,6 @@
       </form>
     </div>
   </div>
-    <script defer src="assets/customJS/cartProducts.js"></script>
-
+  <script defer src="assets/customJS/cartProducts.js"></script>
+  <script defer src="assets/customJS/header.js"></script>
 </header>

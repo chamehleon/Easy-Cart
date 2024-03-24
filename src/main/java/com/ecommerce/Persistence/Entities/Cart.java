@@ -6,10 +6,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "cart", schema = "ecommerce")
 public class Cart {
@@ -22,4 +25,14 @@ public class Cart {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
+    @OneToMany(mappedBy = "cart" ,fetch = FetchType.EAGER ,cascade = CascadeType.ALL)
+    private Set<CartItem> cartItems = new LinkedHashSet<>();
+
+    public void addCartItem(Product product , Integer quantity , BigDecimal amount){
+        cartItems.add(new CartItem(this, product, quantity, amount));
+    }
+
+    public void removeCartItem(CartItem cartItem) {
+        cartItems.remove(cartItem);
+    }
 }

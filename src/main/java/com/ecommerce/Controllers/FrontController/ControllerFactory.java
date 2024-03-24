@@ -1,7 +1,6 @@
 package com.ecommerce.Controllers.FrontController;
 
 import com.ecommerce.Controllers.*;
-import org.eclipse.tags.shaded.org.apache.regexp.RE;
 
 public class ControllerFactory {
     private static ControllerFactory instance;
@@ -20,6 +19,14 @@ public class ControllerFactory {
         switch (controllerName) {
             case "HomeController":
                 return HomeController.getInstance();
+            case "AboutController":
+                return AboutController.getInstance();
+            case "ContactController":
+                return ContactController.getInstance();
+            case "BlogController":
+                return BlogController.getInstance();
+            case "BlogDetailController":
+                return BlogDetailController.getInstance();
             case "RegisterController":
                 return RegisterController.getInstance();
             case "LoginController":
@@ -36,6 +43,12 @@ public class ControllerFactory {
                 return ViewCartController.getInstance();
             case "UpdateCartItemQuantityController":
                 return UpdateCartItemQuantityController.getInstance();
+            case "AddToCartController":
+                return AddToCartController.getInstance();
+//            case "CheckoutController":
+//                return CheckoutController.getInstance();
+
+
             default:
         }
         return null;

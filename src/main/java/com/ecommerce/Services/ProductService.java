@@ -15,10 +15,23 @@ public class ProductService {
         }));
     }
 
-    public static Optional<Product> getProductById(int productId){
-        return Optional.ofNullable(JpaTransactionManager.doInTransaction(em -> {
+    public static Product getProductById(int productId){
+        return JpaTransactionManager.doInTransaction(em -> {
             ProductDAO productDAO = new ProductDAO();
             return productDAO.findById(productId, em);
-        }));
+        });
+    }
+
+    public static boolean sufficientQuantity(Integer  productId){
+
+        return JpaTransactionManager.doInTransaction(em->{
+            ProductDAO productDAO = new ProductDAO();
+            Product product=productDAO.findById(productId, em);
+            if(product.getStockQuantity() >= 1)
+                return true;
+            else
+                return false;
+        });
+
     }
 }

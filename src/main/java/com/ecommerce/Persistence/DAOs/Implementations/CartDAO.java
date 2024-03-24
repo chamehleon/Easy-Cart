@@ -22,7 +22,7 @@ public class CartDAO extends GenericDAOImpl<Cart> {
             System.out.println("d5l try wala la2");
             TypedQuery<Cart> query = entityManager.createQuery("SELECT c FROM Cart c WHERE c.customer = :customer", Cart.class);
             query.setParameter("customer", customer);
-            System.out.println("query "+query.getSingleResult().toString());
+           // System.out.println("query "+query.getSingleResult().toString());
             System.out.println("aaaaaaaeeeeeeeee "+customer.getEmail());
             return query.getSingleResult();
         } catch (NoResultException nre) {

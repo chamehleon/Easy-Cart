@@ -87,77 +87,78 @@ import="com.ecommerce.Persistence.Entities.Product" %>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <!--===============================================================================================-->
 
-    <script>
-      function addToCartMethod(
-        productName,
-        productPrice,
-        productDescription,
-        quantity
-      ) {
-        // Create an object with product information
-        var product = {
-          name: productName,
-          price: productPrice,
-          description: productDescription,
-          quantity: quantity,
-        };
+    <!--  
+    //   function addToCartMethod(
+    //     productName,
+    //     productPrice,
+    //     productDescription,
+    //     quantity
+    //   ) {
+    //     // Create an object with product information
+    //     var product = {
+    //       name: productName,
+    //       price: productPrice,
+    //       description: productDescription,
+    //       quantity: quantity,
+    //     };
 
-        // Retrieve existing list from local storage
-        var existingCart = localStorage.getItem("cartProducts");
+    //     // Retrieve existing list from local storage
+    //     var existingCart = localStorage.getItem("cartProducts");
 
-        // If no existing list, create a new array
-        var cartProducts = existingCart ? JSON.parse(existingCart) : [];
+    //     // If no existing list, create a new array
+    //     var cartProducts = existingCart ? JSON.parse(existingCart) : [];
 
-        // Check if the product already exists in the cart
-        var existingProductIndex = cartProducts.findIndex(function (p) {
-          return p.name === productName && p.description === productDescription;
-        });
+    //     // Check if the product already exists in the cart
+    //     var existingProductIndex = cartProducts.findIndex(function (p) {
+    //       return p.name === productName && p.description === productDescription;
+    //     });
 
-        if (existingProductIndex !== -1) {
-          // If the product already exists, update its quantity
-          cartProducts[existingProductIndex].quantity += quantity;
-        } else {
-          // If the product doesn't exist, add it to the cart
-          cartProducts.push(product);
-        }
+    //     if (existingProductIndex !== -1) {
+    //       // If the product already exists, update its quantity
+    //       cartProducts[existingProductIndex].quantity += quantity;
+    //     } else {
+    //       // If the product doesn't exist, add it to the cart
+    //       cartProducts.push(product);
+    //     }
 
-        // Convert the array to a JSON string
-        var cartProductsJSON = JSON.stringify(cartProducts);
+    //     // Convert the array to a JSON string
+    //     var cartProductsJSON = JSON.stringify(cartProducts);
 
-        // Update the local storage with the new JSON string
-        localStorage.setItem("cartProducts", cartProductsJSON);
+    //     // Update the local storage with the new JSON string
+    //     localStorage.setItem("cartProducts", cartProductsJSON);
 
-        // Optionally, you can provide feedback to the user
-        console.log("Product added to cart!");
+    //     // Optionally, you can provide feedback to the user
+    //     console.log("Product added to cart!");
 
-        // Call the function to load products to cart after adding the new product
-        loadProductsToCart();
-      }
+    //     // Call the function to load products to cart after adding the new product
+    //     loadProductsToCart();
+    //   }
 
-      // Attach the addToCartMethod function to the onclick event of the add-to-cart button
-      document.addEventListener("DOMContentLoaded", function () {
-        var addToCartButton = document.getElementById("add-to-cart-button");
-        if (addToCartButton) {
-          addToCartButton.onclick = function () {
-            // Get product information
-            var productName = "${product.productName}";
-            var productPrice = "${product.productPrice}";
-            var productDescription = "${product.productDescription}";
-            var quantity =
-              parseInt(document.querySelector(".num-product").value) || 1; // Get quantity from input, default to 1 if empty
+    //   // Attach the addToCartMethod function to the onclick event of the add-to-cart button
+    //   document.addEventListener("DOMContentLoaded", function () {
+    //     var addToCartButton = document.getElementById("add-to-cart-button");
+    //     if (addToCartButton) {
+    //       addToCartButton.onclick = function () {
+    //         // Get product information
+    //         var productName = "${product.productName}";
+    //         var productPrice = "${product.productPrice}";
+    //         var productDescription = "${product.productDescription}";
+    //         var quantity =
+    //           parseInt(document.querySelector(".num-product").value) || 1; // Get quantity from input, default to 1 if empty
 
-            addToCartMethod(
-              productName,
-              productPrice,
-              productDescription,
-              quantity
-            );
-          };
-        } else {
-          console.error("Add to cart button not found!");
-        }
-      });
-    </script>
+    //         addToCartMethod(
+    //           productName,
+    //           productPrice,
+    //           productDescription,
+    //           quantity
+    //         );
+    //       };
+    //     } else {
+    //       console.error("Add to cart button not found!");
+    //     }
+    //   });
+    // </script>
+    -->
   </head>
   <body class="animsition">
     <!-- Header -->
@@ -331,8 +332,10 @@ import="com.ecommerce.Persistence.Entities.Product" %>
                     <c:choose>
                       <c:when test="${sessionScope.currentUser != null}">
                         <button
-                          id="add-to-cart-button"
+                          id="addToCartButton"
                           class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
+                          onclick="addToCartWhenLogin('${product.id}', '${product.productName}', '${product.productPrice}',
+                                        '${product.productDescription}','${product.productImages[0].getImageUrl()}',${product.stockQuantity},true)"
                         >
                           Add to cart
                         </button>
@@ -341,52 +344,55 @@ import="com.ecommerce.Persistence.Entities.Product" %>
                         <button
                           id="add-to-cart-button"
                           class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
-                          onclick="console.log('mfesh session');"
+                          onclick="addToCartWhenLogin('${product.id}', '${product.productName}', '${product.productPrice}',
+                                                                  '${product.productDescription}','${product.productImages[0].getImageUrl()}',${product.stockQuantity},false)"
                         >
                           Add to cart
                         </button>
                       </c:otherwise>
                     </c:choose>
                   </div>
+                  <div id="cartMessage" class="error-message2"></div>
                 </div>
               </div>
 
-              <!--  -->
-              <div class="flex-w flex-m p-l-100 p-t-40 respon7">
-                <div class="flex-m bor9 p-r-10 m-r-11">
-                  <a
-                    href="#"
-                    class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100"
-                    data-tooltip="Add to Wishlist"
-                  >
-                    <i class="zmdi zmdi-favorite"></i>
-                  </a>
-                </div>
+              <!--  
+               <div class="flex-w flex-m p-l-100 p-t-40 respon7">
+              //   <div class="flex-m bor9 p-r-10 m-r-11">
+              //     <a
+              //       href="#"
+              //       class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100"
+              //       data-tooltip="Add to Wishlist"
+              //     >
+              //       <i class="zmdi zmdi-favorite"></i>
+              //     </a>
+              //   </div>
 
-                <a
-                  href="#"
-                  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-                  data-tooltip="Facebook"
-                >
-                  <i class="fa fa-facebook"></i>
-                </a>
+              //   <a
+              //     href="#"
+              //     class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
+              //     data-tooltip="Facebook"
+              //   >
+              //     <i class="fa fa-facebook"></i>
+              //   </a>
 
-                <a
-                  href="#"
-                  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-                  data-tooltip="Twitter"
-                >
-                  <i class="fa fa-twitter"></i>
-                </a>
+              //   <a
+              //     href="#"
+              //     class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
+              //     data-tooltip="Twitter"
+              //   >
+              //     <i class="fa fa-twitter"></i>
+              //   </a>
 
-                <a
-                  href="#"
-                  class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-                  data-tooltip="Google Plus"
-                >
-                  <i class="fa fa-google-plus"></i>
-                </a>
-              </div>
+              //   <a
+              //     href="#"
+              //     class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
+              //     data-tooltip="Google Plus"
+              //   >
+              //     <i class="fa fa-google-plus"></i>
+              //   </a>
+               </div>
+              -->
             </div>
           </div>
         </div>
@@ -1211,6 +1217,9 @@ import="com.ecommerce.Persistence.Entities.Product" %>
       });
     </script>
     <!--===============================================================================================-->
-    <script src="assets/js/main.js"></script>
+    <script defer src="assets/customJS/cartHandler.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    
+     
   </body>
 </html>

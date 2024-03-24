@@ -34,4 +34,12 @@ public class OrdersItem {
     @Column(name = "amount", nullable = false, precision = 15, scale = 2)
     private BigDecimal amount;
 
+    public OrdersItem(Order order, Product product, Integer quantity, BigDecimal amount) {
+        this.order = order;
+        this.product = product;
+        this.quantity = quantity;
+        this.amount = amount;
+        this.id = new OrdersItemId(order.getId(), product.getId());
+    }
+
 }

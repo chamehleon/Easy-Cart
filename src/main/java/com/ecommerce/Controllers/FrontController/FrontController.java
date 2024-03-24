@@ -51,8 +51,8 @@ public class FrontController extends HttpServlet {
             case REDIRECT:
                 response.sendRedirect(view);
                 break;
-            case JSON:
-                response.setContentType("application/json");
+            case PLAIN_TEXT:
+                response.setContentType("plain/text");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(view);
             default:

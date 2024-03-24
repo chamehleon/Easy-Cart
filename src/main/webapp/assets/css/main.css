@@ -1025,6 +1025,11 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   color: white;
 }
 
+.error-message2 {
+  color:  red;  
+  left: 0;
+}
+
 
 
 /*---------------------------------------------*/

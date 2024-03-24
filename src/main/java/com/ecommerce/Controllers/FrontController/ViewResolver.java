@@ -40,5 +40,10 @@ public class ViewResolver {
         resolveAction = ResolveAction.REDIRECT;
     }
 
+    public void plainText(final String view) {
+        setView(view);
+        resolveAction = ResolveAction.PLAIN_TEXT;
+    }
+
 
 }

@@ -1,5 +1,6 @@
 package com.ecommerce.Persistence.Entities;
 
+import com.google.gson.annotations.SerializedName;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -33,5 +34,13 @@ public class CartItem {
 
     @Column(name = "amount", nullable = false, precision = 15, scale = 2)
     private BigDecimal amount;
+
+    public CartItem(Cart cart, Product product, Integer quantity, BigDecimal amount) {
+        this.cart = cart;
+        this.product = product;
+        this.quantity = quantity;
+        this.amount = amount;
+        this.id = new CartItemId(cart.getId(), product.getId());
+    }
 
 }

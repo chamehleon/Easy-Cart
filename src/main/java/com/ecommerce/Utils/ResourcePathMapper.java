@@ -6,6 +6,9 @@ public enum ResourcePathMapper {
     PAGE_REGISTER("/pages/register.jsp"),
     PAGE_CART("/pages/shoping-cart.jsp"),
     PAGE_PRODUCT("/pages/product.jsp"),
+    PAGE_CONTACT("/pages/contact.jsp"),
+    PAGE_BLOG("/pages/blog.jsp"),
+    PAGE_BLOG_DETAIL("/pages/blog-detail.jsp"),
     PAGE_PRODUCT_DETAIL("/pages/product-detail.jsp"),
     PAGE_CHECKOUT("/pages/checkout.jsp"),
     PAGE_ORDER("/pages/order.jsp"),
@@ -13,11 +16,13 @@ public enum ResourcePathMapper {
     PAGE_PRODUCT_MANAGEMENT("/pages/productManagement.jsp"),
     PAGE_USER_MANAGEMENT("/pages/userManagement.jsp"),
     PAGE_ORDER_MANAGEMENT("/pages/orderManagement.jsp"),
-    PAGE_ABOUT("/pages/about.html"),
+    PAGE_ABOUT("/pages/about.jsp"),
 
     PAGE_ADMIN("/pages/admin/index.jsp"),
+    PAGE_ADMIN_LOGIN("/pages/admin/login.jsp"),
 
-    PAGE_ERROR("/pages/error.html");
+    PAGE_ORDER_ERROR("/pages/order-error.html"),
+    PAGE_ERROR("/pages/error.jsp");
 
 
 

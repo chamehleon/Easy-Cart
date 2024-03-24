@@ -6,7 +6,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @Getter
@@ -26,4 +29,10 @@ public class Order {
     @Column(name = "ordered_at", nullable = false)
     private Instant orderedAt;
 
+    @OneToMany(mappedBy = "order" ,fetch = FetchType.EAGER ,cascade = CascadeType.ALL)
+    private Set<OrdersItem> orderItems = new LinkedHashSet<>();
+
+    public void addOrderItem(Product product , Integer quantity , BigDecimal amount){
+        orderItems.add(new OrdersItem(this, product, quantity, amount));
+    }
 }

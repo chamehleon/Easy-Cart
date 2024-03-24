@@ -36,13 +36,13 @@
             </div>
 
             <div class="header-cart-buttons flex-w w-full">
-                <a href="?controller=ViewCartController" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                <a href="front?controller=ViewCartController" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
                     View Cart
                 </a>
 
-                <a href="shoping-cart.jsp" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-                    Check Out
-                </a>
+
+
+                <button class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10" onclick="addAllLocalStorageItemsToDB()"> Checkout</button>
             </div>
         </div>
     </div>
@@ -57,3 +57,5 @@
       loadProductsToCart();
     });
   </script>
+  <script defer src="assets/customJS/cartProducts.js"></script>
+  <script defer src="assets/customJS/checkout.js"></script>
