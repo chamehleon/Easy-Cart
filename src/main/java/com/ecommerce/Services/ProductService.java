@@ -34,4 +34,21 @@ public class ProductService {
         });
 
     }
+    // create a new product
+    public static Boolean createProduct(Product product){
+        return JpaTransactionManager.doInTransaction(em -> {
+            ProductDAO productDAO = new ProductDAO();
+            return productDAO.create(product, em);
+        });
+    }
+
+    // update product details
+    public static Optional<Product> updateProduct(Product product){
+        return Optional.ofNullable(JpaTransactionManager.doInTransaction(em -> {
+            ProductDAO productDAO = new ProductDAO();
+            return productDAO.update(product, em);
+        }));
+    }
+
+
 }

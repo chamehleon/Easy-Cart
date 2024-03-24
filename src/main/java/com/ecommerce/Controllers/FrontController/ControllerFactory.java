@@ -1,6 +1,7 @@
 package com.ecommerce.Controllers.FrontController;
 
 import com.ecommerce.Controllers.*;
+import com.ecommerce.Controllers.AdminControllers.*;
 
 public class ControllerFactory {
     private static ControllerFactory instance;
@@ -49,6 +50,20 @@ public class ControllerFactory {
 //                return CheckoutController.getInstance();
 
 
+            case "AdminController":
+                return AdminController.getInstance();
+            case "AdminProductsController":
+                return AdminProductsController.getInstance();
+            case "AdminAddProductController":
+                return AdminAddProductController.getInstance();
+            case "AdminUpdateProductController":
+                return AdminUpdateProductController.getInstance();
+            case "AdminAccountsController":
+                return AdminAccountsController.getInstance();
+            case "AdminOrderHistoryController":
+                return AdminOrderHistoryController.getInstance();
+            case "AdminRefreshController":
+                return AdminRefreshController.getInstance();
             default:
         }
         return null;

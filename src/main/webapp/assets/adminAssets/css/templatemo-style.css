@@ -25,6 +25,11 @@ a:hover {
 button:focus {
   outline: 0;
 }
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -321,7 +326,7 @@ thead {
   margin-bottom: 20px;
 }
 .form-control {
-  padding: 19px 18px;
+  padding: 12px 18px;
   border-radius: 0;
   height: 50px;
 }

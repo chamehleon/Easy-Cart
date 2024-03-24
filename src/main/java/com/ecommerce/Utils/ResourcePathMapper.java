@@ -19,7 +19,15 @@ public enum ResourcePathMapper {
     PAGE_ABOUT("/pages/about.jsp"),
 
     PAGE_ADMIN("/pages/admin/index.jsp"),
-    PAGE_ADMIN_LOGIN("/pages/admin/login.jsp"),
+    PAGE_ADMIN_PRODUCT("/pages/admin/products.jsp"),
+
+
+    PAGE_ADMIN_ADD_PRODUCT("/pages/admin/add-product.jsp"),
+    PAGE_ADMIN_VIEW_PRODUCT("/pages/admin/edit-product.jsp"),
+
+    ADMIN_PRODUCT_CONTROLLER("AdminProductsController"),
+    PAGE_ADMIN_ACCOUNTS("/pages/admin/accounts.jsp"),
+    PAGE_ADMIN_ORDER_HISTORY("/pages/admin/order-history.jsp"),
 
     PAGE_ORDER_ERROR("/pages/order-error.html"),
     PAGE_ERROR("/pages/error.jsp");
