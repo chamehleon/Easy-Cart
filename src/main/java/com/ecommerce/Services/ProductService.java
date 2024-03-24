@@ -15,10 +15,18 @@ public class ProductService {
         }));
     }
 
-    public static Product getProductById(int productId){
+    public static Product getProducttById(int productId){
         return JpaTransactionManager.doInTransaction(em -> {
             ProductDAO productDAO = new ProductDAO();
             return productDAO.findById(productId, em);
+        });
+    }
+
+    public static Optional<Product> getProductById(int productId){
+        return JpaTransactionManager.doInTransaction(em -> {
+            ProductDAO productDAO = new ProductDAO();
+            Optional<Product> product = Optional.ofNullable(productDAO.findById(productId, em));
+            return product;
         });
     }
 

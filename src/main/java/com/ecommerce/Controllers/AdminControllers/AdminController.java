@@ -25,7 +25,7 @@ public class AdminController implements IController {
             String method = request.getMethod();
             if (method.equals("GET")) {
                 System.out.println("iam Get");
-                resolver.forward(ResourcePathMapper.PAGE_ADMIN_LOGIN.getPath());
+                 resolver.forward(ResourcePathMapper.PAGE_ADMIN.getPath());
             } else if (method.equals("POST")) {
             }
         }

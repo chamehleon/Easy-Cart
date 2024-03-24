@@ -5,61 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c684136-d234-410e-9658-376878f7ff9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AboutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AddToCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/BlogDetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ContactController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/ProductWithQuantityDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Mappers/ProductMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/checkout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/order-error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminControllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminControllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ResolveAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ResolveAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ViewResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ViewResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ProductDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/checko.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItemId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItemId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/blog-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/blog-detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/blog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/blog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header3.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header3.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/home-02.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/product-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/product-detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" afterDir="false" />
     </list>
-    <list id="1a1c097e-c396-46d0-b254-7e8461d8f343" name="Changes by me771" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartProducts.js" afterDir="false" />
-    </list>
+    <list id="1a1c097e-c396-46d0-b254-7e8461d8f343" name="Changes by me771" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,22 +29,6 @@
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/webapp/assets/customJS/cartProducts.js">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="25" changelist="1a1c097e-c396-46d0-b254-7e8461d8f343" />
-        <range start1="2" end1="3" start2="26" end2="27" changelist="1a1c097e-c396-46d0-b254-7e8461d8f343" />
-        <range start1="6" end1="23" start2="30" end2="125" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java">
-      <ranges>
-        <range start1="17" end1="19" start2="17" end2="19" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-        <range start1="21" end1="22" start2="21" end2="22" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-        <range start1="23" end1="23" start2="23" end2="36" changelist="1a1c097e-c396-46d0-b254-7e8461d8f343" />
-      </ranges>
-    </file>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />

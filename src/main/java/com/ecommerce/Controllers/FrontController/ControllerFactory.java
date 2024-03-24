@@ -38,8 +38,6 @@ public class ControllerFactory {
                 return ProductController.getInstance();
             case "ProductDetailController":
                 return ProductDetailController.getInstance();
-            case "AdminController":
-                return AdminController.getInstance();
             case "ViewCartController":
                 return ViewCartController.getInstance();
             case "UpdateCartItemQuantityController":
