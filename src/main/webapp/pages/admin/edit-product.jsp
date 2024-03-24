@@ -93,6 +93,7 @@
                                 id="price"
                                 name="productPrice"
                                 type="number"
+                                min = "0"
                                 value="${product.productPrice}"
                                 class="form-control validate"
                                 data-large-mode="true"
@@ -108,7 +109,7 @@
                                   name="stockQuantity"
                                   type="text"
                                   value="${product.stockQuantity}"
-                                  class="form-control validate"
+                                  class="form-control"
                           />
                         </div>
                   </div>

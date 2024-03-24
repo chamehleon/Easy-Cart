@@ -51,6 +51,9 @@ public class Customer {
     @Column(name = "interests", nullable = false)
     private String interests;
 
+
+
+
     public Customer(String customerName, LocalDate birthday, String password, String job, String email, BigDecimal creditLimit, String city, String country, String streetNo, String streetName, String interests) {
         this.customerName = customerName;
         this.birthday = birthday;

@@ -46,6 +46,8 @@ public class ControllerFactory {
                 return AdminAccountsController.getInstance();
             case "AdminOrderHistoryController":
                 return AdminOrderHistoryController.getInstance();
+            case "AdminRefreshController":
+                return AdminRefreshController.getInstance();
             default:
         }
         return null;
