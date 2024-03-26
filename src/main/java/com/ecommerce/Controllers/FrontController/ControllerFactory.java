@@ -48,22 +48,15 @@ public class ControllerFactory {
                 return CheckoutController.getInstance();
             case "CheckoutSuccessController":
                 return CheckoutSuccessController.getInstance();
+//            case "UpdateUserInfoController":
+//                return UpdateUserInfoController.getInstance();
+//            case "UserOrdersController":
+//                return UserOrdersController.getInstance();
+//            case "LogOutController":
+//                return LogOutController.getInstance();
 
 
-            case "AdminController":
-                return AdminController.getInstance();
-            case "AdminProductsController":
-                return AdminProductsController.getInstance();
-            case "AdminAddProductController":
-                return AdminAddProductController.getInstance();
-            case "AdminUpdateProductController":
-                return AdminUpdateProductController.getInstance();
-            case "AdminAccountsController":
-                return AdminAccountsController.getInstance();
-            case "AdminOrderHistoryController":
-                return AdminOrderHistoryController.getInstance();
-            case "AdminRefreshController":
-                return AdminRefreshController.getInstance();
+
             default:
                 return ErrorPageController.getInstance();
         }

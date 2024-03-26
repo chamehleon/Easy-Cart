@@ -363,5 +363,6 @@
 
     <!--===============================================================================================-->
     <script src="assets/js/main.js"></script>
+  <script defer src="assets/customJS/checkout.js"></script>
   </body>
 </html>
