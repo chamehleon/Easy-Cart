@@ -12,7 +12,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "category", schema = "ecommerce")
 public class Category {

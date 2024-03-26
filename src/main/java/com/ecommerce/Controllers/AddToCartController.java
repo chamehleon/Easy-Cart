@@ -49,16 +49,14 @@ public class AddToCartController implements IController {
             CustomerDTO customerDto = (CustomerDTO) session.getAttribute("currentUser");
             if(!ProductService.sufficientQuantity(productId))
             {
-                System.out.println("5elst");
                 resolver.plainText("false");
             }else
             System.out.println("customer id is " + customerDto.getId());
                 if(CartService.addProductToCart(productId, customerDto.getId())) {
-                    System.out.println("available");
+                    System.out.println("Mastooora");
                     resolver.plainText("true");
                 }
                 else{
-                    System.out.println("msh haykafy");
                     resolver.plainText("false");
                 }
 

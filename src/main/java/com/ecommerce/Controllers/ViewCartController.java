@@ -38,11 +38,9 @@ public class ViewCartController implements IController {
                 if (session == null || session.getAttribute("currentUser") == null) {
                     resolver.forward(ResourcePathMapper.PAGE_LOGIN.getPath());
                 } else {
-                    System.out.println("currentUser: " + session.getAttribute("currentUser").toString());
                     Customer customer = CustomerMapper.INSTANCE.toEntity((CustomerDTO) session.getAttribute("currentUser"));
-                    System.out.println("customer: " + customer.toString());
-                    Set<CartItem> cartItems = CartService.viewCart(customer);
-                    System.out.println("From ViewCartController cartItems: " + cartItems.toString());
+                    Set<CartItem> cartItems = CartService.viewCart(customer.getId());
+
                     session.setAttribute("cartItems", cartItems);
                     resolver.forward(ResourcePathMapper.PAGE_CART.getPath());
                 }

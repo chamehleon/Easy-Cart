@@ -44,8 +44,10 @@ public class ControllerFactory {
                 return UpdateCartItemQuantityController.getInstance();
             case "AddToCartController":
                 return AddToCartController.getInstance();
-//            case "CheckoutController":
-//                return CheckoutController.getInstance();
+            case "CheckoutController":
+                return CheckoutController.getInstance();
+            case "CheckoutSuccessController":
+                return CheckoutSuccessController.getInstance();
 
 
             case "AdminController":
@@ -63,7 +65,7 @@ public class ControllerFactory {
             case "AdminRefreshController":
                 return AdminRefreshController.getInstance();
             default:
+                return ErrorPageController.getInstance();
         }
-        return null;
     }
 }

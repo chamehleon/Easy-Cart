@@ -65,6 +65,19 @@
     <link rel="stylesheet" type="text/css" href="assets/css/util.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <!--===============================================================================================-->
+    <style>
+      .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+      .unselectable {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
   </head>
   <body class="animsition">
     <!-- Header -->
@@ -107,8 +120,10 @@
                     <tr class="table_row">
                       <td class="column-1">
                         <div class="how-itemcart1">
-                          <img src=https://i.postimg.cc/FRNwCcbw/about-02.jpg
-                          alt="IMG" />
+                          <img
+                            src="${item.product.productImages[0].getImageUrl()}"
+                            alt="IMG"
+                          />
                         </div>
                       </td>
                       <td class="column-2">${item.product.productName}</td>
@@ -192,14 +207,14 @@
                   />
 
                   <div
-                    class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5"
+                    class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5 unselectable disabled"
                   >
                     Apply coupon
                   </div>
                 </div>
 
                 <div
-                  class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10"
+                  class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10 unselectable disabled"
                 >
                   Update Cart
                 </div>
@@ -266,7 +281,7 @@
 
                     <div class="flex-w">
                       <div
-                        class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer"
+                        class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer unselectable disabled"
                       >
                         Update Totals
                       </div>
@@ -285,11 +300,12 @@
                 </div>
               </div>
 
-              <button
-                class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer"
+              <a
+                class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" style="color: white;"
+                onclick="proceedToCheckout()"
               >
                 Proceed to Checkout
-              </button>
+              </a>
             </div>
           </div>
         </div>

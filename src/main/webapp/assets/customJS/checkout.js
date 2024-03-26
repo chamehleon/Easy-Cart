@@ -1,30 +1,22 @@
-function addAllLocalStorageItemsToDB() {
-  console.log("addAllLocalStorageItemsToDB called");
+function proceedToCheckout(){
+      fetch("front?controller=CheckoutController", {
+        method: "GET"
+      })
+          .then((response) => response.text())
+          .then((data) => {
+            if (data == "Insufficient credit") {
+              console.log("credit error");
+    //          document.getElementById("checkoutError").innerText = data;
+            } else if(data == "checkout is done bro"){
+              window.location.href ="front?controller=CheckoutSuccessController";
 
-  // Retrieve cartItems from localStorage or define it if needed
-  const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-   console.log("cartItems", cartItems);
-
-  // Convert cartItems to JSON
-  const jsonData = JSON.stringify(cartItems);
-
-  // Send JSON data to backend using fetch
-  fetch("front?controller=CheckoutController", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: jsonData
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Failed to send checkout request');
+            }
+            else{
+              console.log("out of stock");
+    //          document.getElementById("checkoutError").innerText = data;
+            }
+          })
+          .catch((error) => {
+            console.log("An error occurred while checkout:", error);
+          });
     }
-    console.log("Checkout request sent successfully");
-    // Assuming the checkout request was sent successfully
-  })
-  .catch(error => {
-    console.error("Error sending checkout request:", error);
-    // Optionally, handle the case where checkout fails
-  });
-}

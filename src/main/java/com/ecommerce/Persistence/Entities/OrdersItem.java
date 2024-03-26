@@ -11,7 +11,6 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name = "orders_items", schema = "ecommerce")
 public class OrdersItem {

@@ -82,7 +82,7 @@
         <!-- Icon header -->
         <div class="wrap-icon-header flex-w flex-r-m">
           <div
-            class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search"
+            class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11"
           >
             <i class="zmdi zmdi-search"></i>
           </div>
@@ -94,12 +94,12 @@
             <i class="zmdi zmdi-shopping-cart"></i>
           </div>
 
-          <a
+          <!-- <a
             href="#"
             class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
             data-notify="0"
-          >
-            <i class="zmdi zmdi-favorite-outline"></i>
+          > -->
+            <!-- <i class="zmdi zmdi-favorite-outline"></i> -->
           </a>
         </div>
       </nav>
@@ -211,7 +211,7 @@
   </div>
 
   <!-- Modal Search -->
-  <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+  <!-- <div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
     <div class="container-search-header">
       <button
         class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search"
@@ -219,13 +219,13 @@
         <img src="assets/images/icons/icon-close2.png" alt="CLOSE" />
       </button>
 
-      <form class="wrap-search-header flex-w p-l-15">
-        <button class="flex-c-m trans-04">
-          <i class="zmdi zmdi-search"></i>
+      <form class="wrap-search-header flex-w p-l-15" action="front?controller=HomeController" method="GET">
+        <button class="flex-c-m trans-04" type="submit">
+            <i class="zmdi zmdi-search"></i>
         </button>
         <input class="plh3" type="text" name="search" placeholder="Search..." />
-      </form>
-    </div>
+    </form>
+    </div> -->
   </div>
   <script defer src="assets/customJS/cartProducts.js"></script>
   <script defer src="assets/customJS/header.js"></script>

@@ -5,11 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c684136-d234-410e-9658-376878f7ff9f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutSuccessController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ErrorPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/checkout-success.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-Mar-24_2_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-Mar-24_2_29_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminControllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminControllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AddToCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AddToCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ProductDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ViewCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ViewCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/CustomerDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItemId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItemId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/customJS/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shoping-cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shoping-cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" afterDir="false" />
     </list>
     <list id="1a1c097e-c396-46d0-b254-7e8461d8f343" name="Changes by me771" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +76,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;admin&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v1&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/tomcat/SOAP&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -97,6 +119,9 @@
       <option name="catalinaBase" value="C:\Users\Lenovo\.SmartTomcat\Easy-Cart\ecommerce" />
       <option name="contextPath" value="/ecommerce" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="9090" />
       <option name="tomcatInfo">
@@ -128,17 +153,23 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java</url>
+          <line>233</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="com.poratu.idea.plugins.tomcat">
+        <watch expression="e" language="JAVA" />
+        <watch expression="((NullPointerException)e).extendedMessageState" custom="java.lang.NullPointerException" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

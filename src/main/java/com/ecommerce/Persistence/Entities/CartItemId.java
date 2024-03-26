@@ -11,7 +11,6 @@ import java.util.Objects;
 @AllArgsConstructor
 @Getter
 @Setter
-@ToString
 @Embeddable
 public class CartItemId implements Serializable {
     private static final long serialVersionUID = 7275892230776691868L;

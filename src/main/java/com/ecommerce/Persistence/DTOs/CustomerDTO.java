@@ -1,5 +1,6 @@
 package com.ecommerce.Persistence.DTOs;
 
+import lombok.Data;
 import lombok.Value;
 
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
  * DTO for {@link com.ecommerce.Persistence.Entities.Customer}
  */
 @Value
+@Data
 public class CustomerDTO implements Serializable {
     Integer id;
     String customerName;
