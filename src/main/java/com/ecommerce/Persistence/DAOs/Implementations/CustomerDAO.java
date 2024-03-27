@@ -4,11 +4,14 @@ import com.ecommerce.Persistence.DAOs.GenericDAOs.GenericDAOImpl;
 import com.ecommerce.Persistence.DAOs.GenericDAOs.GenericDAOInt;
 import com.ecommerce.Persistence.Entities.Customer;
 //import com.ecommerce.Persistence.PersistenceManager;
+import com.ecommerce.Persistence.Entities.Order;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class CustomerDAO extends GenericDAOImpl<Customer> {
@@ -16,6 +19,28 @@ public class CustomerDAO extends GenericDAOImpl<Customer> {
 
     public CustomerDAO() {
         super(Customer.class);
+    }
+
+    public ArrayList<Order> getCustomerOrdersWithItems(Customer customer, int pageNumber, EntityManager entityManager) {
+        final int PAGESIZE = 5 ;
+        
+        ArrayList<Order> orders = new ArrayList<>();
+        int startIndex = (pageNumber - 1) * PAGESIZE;
+        
+        try {
+            customer = entityManager.find(Customer.class , customer.getId()  );
+            List<Order> orderList = new ArrayList<>(customer.getOrders());
+            int len = customer.getOrders().size();
+            int counter = 0 ;
+            for(int i = startIndex ; i < len   ; i ++ ){
+               if(counter == PAGESIZE) break;
+               counter++;
+               orders.add(orderList.get(i));
+            }
+        } catch ( NoResultException nre ) {
+            nre.printStackTrace();
+        }
+        return ( orders );
     }
 
     public Optional<Customer> findUserByEmail( String email, EntityManager entityManager ) {
@@ -42,6 +67,16 @@ public class CustomerDAO extends GenericDAOImpl<Customer> {
         }
         return Optional.ofNullable( customer );
     }
+    public Optional<Customer> updateUserInfo(Customer customer, EntityManager entityManager) {
+        Customer updatedCustomer = null;
+        try {
+            updatedCustomer = entityManager.merge(customer );
+        } catch ( NoResultException nre ) {
+            nre.printStackTrace();
+        }
+        return Optional.ofNullable( updatedCustomer );
+    }
+
 
 
 //    public List<User> getPage( int pageNumber ) {

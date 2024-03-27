@@ -45,5 +45,10 @@ public class ViewResolver {
         resolveAction = ResolveAction.PLAIN_TEXT;
     }
 
+    public void JSON(String view) {
+        setView(view);
+        resolveAction = ResolveAction.JSON;
+    }
+
 
 }

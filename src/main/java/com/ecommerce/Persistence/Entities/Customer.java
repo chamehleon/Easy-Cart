@@ -55,7 +55,9 @@ public class Customer {
     @OneToOne(mappedBy = "customer")
     private Cart cart;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(fetch = FetchType.LAZY , mappedBy = "customer")
+    @org.hibernate.annotations.BatchSize(size=5)
+    @OrderBy("orderedAt desc")
     private Set<Order> orders = new LinkedHashSet<>();
 
     public Customer(String customerName, LocalDate birthday, String password, String job, String email, BigDecimal creditLimit, String city, String country, String streetNo, String streetName, String interests) {

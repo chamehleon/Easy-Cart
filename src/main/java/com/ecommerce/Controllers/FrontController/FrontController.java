@@ -58,6 +58,10 @@ public class FrontController extends HttpServlet {
                 response.setContentType("plain/text");
                 response.setCharacterEncoding("UTF-8");
                 response.getWriter().write(view);
+                case JSON:
+                response.setContentType("application/json");
+                response.setCharacterEncoding("UTF-8");
+                response.getWriter().write(view);
             default:
                 break;
         }

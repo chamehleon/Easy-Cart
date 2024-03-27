@@ -18,7 +18,6 @@ public enum ResourcePathMapper {
     PAGE_ORDER_MANAGEMENT("/pages/orderManagement.jsp"),
     PAGE_ABOUT("/pages/about.jsp"),
     PAGE_CHECKOUT_SUCCESS("/pages/checkout-success.jsp"),
-
     PAGE_ADMIN("/pages/admin/index.jsp"),
     PAGE_ADMIN_PRODUCT("/pages/admin/products.jsp"),
 
@@ -31,7 +30,10 @@ public enum ResourcePathMapper {
     PAGE_ADMIN_ORDER_HISTORY("/pages/admin/order-history.jsp"),
 
     PAGE_ORDER_ERROR("/pages/order-error.html"),
-    PAGE_ERROR("/pages/error.jsp");
+    PAGE_ERROR("/pages/error.jsp"),
+    
+    PAGE_PROFILE("/pages/profile.jsp");
+
 
 
 
