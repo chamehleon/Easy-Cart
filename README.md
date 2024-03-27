@@ -1,5 +1,5 @@
 
-# Easy-Cart WEB APPLICATION
+# Easy-Cart Ecommerce Web Application
 
 This project is a web application designed to evaluate various client-side technologies, servlets, JSP, asynchronous development, and ORM. It functions as a basic e-commerce platform with essential features for both users and administrators.
 
