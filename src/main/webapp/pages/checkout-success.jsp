@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ page import="com.ecommerce.Persistence.Entities.Order" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -120,7 +123,8 @@
 
                 <img class="green-tick" src="assets/images/icons/green-tick.jpg" alt="success" />
                 <h1 class="h1">Purchase successful!</h1>
-                <p class="para">Your order number is: <b>227383</b>.</p>
+
+                <p class="para">Your order number is: <b>${sessionScope.orderID}</b></p>
                 <p class="para">You will receive an order confirmation email with details of your order and a link to track its progress.</p>
                 <p class="para">All necessary information about the delivery, we sent to your email.</p>
                 <a class="anchor flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer" href="front?controller=FetchProducts">CONTINUE SHOPPING</a>

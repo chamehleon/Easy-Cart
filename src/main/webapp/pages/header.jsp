@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <header class="header-v4">
   <!-- Header desktop -->
   <div class="container-menu-desktop">
@@ -11,21 +12,30 @@
         <div class="right-top-bar flex-w h-full">
           <a href="#" class="flex-c-m trans-04 p-lr-25"> Help & FAQs </a>
 
-          <a
-            href="front?controller=RegisterController"
-            class="flex-c-m trans-04 p-lr-25"
-          >
-            My Account
-          </a>
-          <a
-            href="front?controller=AdminController"
-            class="flex-c-m trans-04 p-lr-25"
-          >
-            Admin Panel
-          </a>
-          <a href="" class="flex-c-m trans-04 p-lr-25"> EN </a>
+          <c:choose>
+            <c:when test="${not empty sessionScope.currentUser}">
+              <a
 
-          <a href="" class="flex-c-m trans-04 p-lr-25"> USD </a>
+                      href="front?controller=MyAccountController"
+                      class="flex-c-m trans-04 p-lr-25"
+              >
+                My Account
+              </a>
+            </c:when>
+            <c:otherwise>
+              <a
+
+                      href="front?controller=RegisterController"
+                      class="flex-c-m trans-04 p-lr-25"
+              >
+                Register
+              </a>
+            </c:otherwise>
+          </c:choose>
+    <c:if test="${not empty sessionScope.currentUser}">
+          <a href="front?controller=LogOutController" class="flex-c-m trans-04 p-lr-25"> Logout </a>
+    </c:if>
+
         </div>
       </div>
     </div>
@@ -73,33 +83,35 @@
               <a href="front?controller=ContactController">Contact</a>
             </li>
 
-            <li class="${param.active == 'admin' ? 'active-menu' : ''}">
-              <a href="front?controller=AdminController">Admin</a>
-            </li>
+            <%--            <li class="${param.active == 'admin' ? 'active-menu' : ''}">--%>
+            <%--              <a href="front?controller=AdminController">Admin</a>--%>
+            <%--            </li>--%>
           </ul>
         </div>
 
         <!-- Icon header -->
         <div class="wrap-icon-header flex-w flex-r-m">
           <div
-            class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11"
+                  class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11"
           >
             <i class="zmdi zmdi-search"></i>
           </div>
 
           <div
-            class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart cart-count"
-            data-notify="2"
+                  class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart cart-count"
+                  data-notify="2"
           >
             <i class="zmdi zmdi-shopping-cart"></i>
           </div>
-
+<%--          <c:if test="${not empty sessionScope.currentUser}">--%>
+<%--            <p id = "logOut" style="cursor: pointer;" href=""class="flex-c-m trans-04 p-lr-25"  onClick="removeCookieAndReload();"><i style="color: red;font-size:24px;" class="fa fa-sign-out" ></i></p>--%>
+<%--          </c:if>--%>
           <!-- <a
             href="#"
             class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
             data-notify="0"
           > -->
-            <!-- <i class="zmdi zmdi-favorite-outline"></i> -->
+          <!-- <i class="zmdi zmdi-favorite-outline"></i> -->
           </a>
         </div>
       </nav>
@@ -111,32 +123,34 @@
     <!-- Logo moblie -->
     <div class="logo-mobile">
       <a href="front?controller=HomeController"
-        ><img src="assets/images/icons/dd.png" alt="IMG-LOGO"
+      ><img src="assets/images/icons/dd.png" alt="IMG-LOGO"
       /></a>
     </div>
 
     <!-- Icon header -->
     <div class="wrap-icon-header flex-w flex-r-m m-r-15">
       <div
-        class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search"
+              class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search"
       >
         <i class="zmdi zmdi-search"></i>
       </div>
 
       <div
-        class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart cart-count"
-        data-notify="2"
+              class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart cart-count"
+              data-notify="2"
       >
         <i class="zmdi zmdi-shopping-cart"></i>
       </div>
 
       <a
-        href="#"
-        class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
-        data-notify="0"
+              href="#"
+              class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
+              data-notify="0"
       >
         <i class="zmdi zmdi-favorite-outline"></i>
       </a>
+      <%--      <p style="cursor: pointer;" href=""class="flex-c-m trans-04 p-lr-25"  onClick="removeCookieAndReload();"><i style="color: red;font-size:24px;" class="fa fa-sign-out" ></i></p>--%>
+
     </div>
 
     <!-- Button show menu -->
@@ -159,8 +173,27 @@
       <li>
         <div class="right-top-bar flex-w h-full">
           <a href="#" class="flex-c-m p-lr-10 trans-04"> Help & FAQs </a>
+          <c:choose>
+            <c:when test="${not empty sessionScope.currentUser}">
+              <a
 
-          <a href="#" class="flex-c-m p-lr-10 trans-04"> My Account </a>
+                      href="front?controller=MyAccountController"
+                      class="flex-c-m p-lr-10 trans-04"
+              >
+                My Account
+              </a>
+            </c:when>
+            <c:otherwise>
+              <a
+
+                      href="front?controller=RegisterController"
+                      class="flex-c-m p-lr-10 trans-04"
+              >
+                Register
+              </a>
+            </c:otherwise>
+          </c:choose>
+
 
           <a href="#" class="flex-c-m p-lr-10 trans-04"> EN </a>
 
@@ -188,9 +221,9 @@
 
       <li>
         <a
-          href="front?controller=FetchProducts"
-          class="label1 rs1"
-          data-label1="hot"
+                href="front?controller=FetchProducts"
+                class="label1 rs1"
+                data-label1="hot"
         >
           Shop</a
         >
@@ -229,4 +262,10 @@
   </div>
   <script defer src="assets/customJS/cartProducts.js"></script>
   <script defer src="assets/customJS/header.js"></script>
+  <script defer src="assets/customJS/sessionStatus.js"></script>
+  <script>
+    function removeCookieAndReload() {
+      // window.location.href  = "http://localhost:9090/ecommerce/front?controller=LogOutController";
+    }
+  </script>
 </header>

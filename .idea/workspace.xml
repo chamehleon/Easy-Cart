@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ecommerce:war" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c684136-d234-410e-9658-376878f7ff9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutSuccessController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ErrorPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/checkout-success.jsp" afterDir="false" />
+    <list default="true" id="0c684136-d234-410e-9658-376878f7ff9f" name="Changes" comment="v2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckLoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-Mar-24_2_29_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-Mar-24_2_29_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AddToCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AddToCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminControllers/AdminFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/AdminControllers/AdminFrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckEmailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/CheckEmailServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ViewCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/ViewCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DAOs/Implementations/CartDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/DTOs/CustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/CartItemId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItemId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Persistence/Entities/OrdersItemId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Services/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/customJS/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/checkout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/customJS/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/customJS/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/add-product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/add-product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/edit-product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/edit-product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/products.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/shoping-cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/shoping-cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/viewCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header3.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header3.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/register.jsp" afterDir="false" />
     </list>
     <list id="1a1c097e-c396-46d0-b254-7e8461d8f343" name="Changes by me771" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +53,9 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -59,13 +63,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2dcGNlrROlQKO5iZLjPv1BbQiIU" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -73,15 +73,25 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Maven.ecommerce [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.ecommerce [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.19.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;v1&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v2&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/tomcat/SOAP&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -96,7 +106,7 @@
       <recent name="com.ecommerce.Controllers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.19">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Easy-Cart" />
       <method v="2">
@@ -108,6 +118,93 @@
       <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 10.1.19" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.19" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="ecommerce:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ecommerce" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9ae619cc-30cf-410b-a633-65425daa4452" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57339" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ecommerce:war" />
+        </option>
       </method>
     </configuration>
     <configuration name="Unnamed" type="com.poratu.idea.plugins.tomcat" nameIsGenerated="true">
@@ -137,6 +234,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 10.1.19" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -146,8 +246,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710299918649</updated>
+      <workItem from="1711494277257" duration="7708000" />
+      <workItem from="1711503752717" duration="3324000" />
     </task>
+    <task id="LOCAL-00001" summary="v2">
+      <option name="closed" value="true" />
+      <created>1711495765218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711495765218</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

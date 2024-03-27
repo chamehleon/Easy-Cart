@@ -601,6 +601,20 @@
 <!--===============================================================================================-->
 <script src="assets/js/main.js"></script>
 <script src="assets/customJS/isotope.js"></script>
+<script>
+    // Function to get a parameter from the URL
+    function getURLParameter(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+    }
+
+    // Get the 'category' parameter from the URL
+    var category = getURLParameter('category');
+
+    // If the 'category' parameter is not null, trigger a click event on the corresponding button
+    if (category) {
+        document.querySelector('.filter-tope-group button[data-filter=".' + category + '"]').click();
+    }
+</script>
 
 </body>
 </html>

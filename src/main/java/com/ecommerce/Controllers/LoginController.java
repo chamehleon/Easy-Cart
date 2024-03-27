@@ -56,6 +56,7 @@ public class LoginController implements IController {
         CustomerDTO customerDTO = CustomerService.findUserByEmail(email);
         boolean correctPassword = PasswordHashing.checkPassword(password, customerDTO.getPassword());
         System.out.println("From LoginController: " + customerDTO.toString());
+
         if (customerDTO != null && correctPassword) {
             HttpSession session = req.getSession(true);
             session.setAttribute("currentUser", customerDTO);

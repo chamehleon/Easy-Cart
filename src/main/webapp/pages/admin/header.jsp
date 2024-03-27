@@ -9,7 +9,7 @@
 
 <nav class="navbar navbar-expand-xl">
     <div class="container h-100">
-        <a class="navbar-brand" href="front?controller=AdminController">
+        <a class="navbar-brand" href="Admin?controller=AdminController">
             <h1 class="tm-site-title mb-0">Product Admin</h1>
         </a>
         <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto h-100">
                 <li class="nav-item">
-                    <a class="nav-link active" href="front?controller=AdminController">
+                    <a class="nav-link active" href="Admin?controller=AdminController">
                         <i class="fas fa-tachometer-alt"></i>
                         Dashboard
                         <span class="sr-only">(current)</span>
@@ -36,20 +36,20 @@
                                 </span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="front?controller=AdminRefreshController">Daily Report</a>
+                        <a class="dropdown-item" href="Admin?controller=AdminRefreshController">Daily Report</a>
                         <a class="dropdown-item" href="#">Weekly Report</a>
                         <a class="dropdown-item" href="#">Yearly Report</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="front?controller=AdminProductsController">
+                    <a class="nav-link" href="Admin?controller=AdminProductsController">
                         <i class="fas fa-shopping-cart"></i>
                         Products
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="front?controller=AdminAccountsController">
+                    <a class="nav-link" href="Admin?controller=AdminAccountsController">
                         <i class="far fa-user"></i>
                         Accounts
                     </a>

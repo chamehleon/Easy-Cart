@@ -43,7 +43,7 @@
             </div>
             <div class="row tm-edit-product-row">
               <div class="col-xl-6 col-lg-6 col-md-12">
-                <form method = "POST" action="front?controller=AdminAddProductController" class="tm-edit-product-form">
+                <form method = "POST" action="Admin?controller=AdminAddProductController" class="tm-edit-product-form">
                   <div class="form-group mb-3">
                     <label
                       for="name"

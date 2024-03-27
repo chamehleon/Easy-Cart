@@ -49,7 +49,7 @@
                 <tbody>
 
                 <c:forEach var="product" items="${products}">
-                  <tr data-id="${product.id}"  data-href = "front?controller=AdminUpdateProductController&id=${product.id}">
+                  <tr data-id="${product.id}"  data-href = "Admin?controller=AdminUpdateProductController&id=${product.id}">
                     <th scope="row"><input type="checkbox" /></th>
                     <td class="tm-product-name">${product.productName}</td>
                     <td>${product.stockQuantity}</td>
@@ -67,7 +67,7 @@
             </div>
             <!-- table container -->
             <a
-              href="front?controller=AdminAddProductController"
+              href="Admin?controller=AdminAddProductController"
               class="btn btn-primary btn-block text-uppercase mb-3">Add new product</a>
             <button class="btn btn-primary btn-block text-uppercase">
               Delete selected products

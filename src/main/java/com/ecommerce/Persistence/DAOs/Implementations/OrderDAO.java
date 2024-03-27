@@ -3,7 +3,12 @@ package com.ecommerce.Persistence.DAOs.Implementations;
 import com.ecommerce.Persistence.DAOs.GenericDAOs.GenericDAOImpl;
 import com.ecommerce.Persistence.Entities.Customer;
 import com.ecommerce.Persistence.Entities.Order;
+
 import com.ecommerce.Persistence.Entities.OrdersItem;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
@@ -40,4 +45,14 @@ public class OrderDAO extends GenericDAOImpl<Order> {
         return (map);
     }
 
+
+    public Integer getMostRecentOrderPrimaryKeyByCustomer(int customerId, EntityManager em) {
+        Query query = em.createQuery(
+                "SELECT o.id FROM Order o " +
+                        "WHERE o.customer.id = :customerId " +
+                        "ORDER BY o.orderedAt DESC", Integer.class);
+        query.setParameter("customerId", customerId);
+        query.setMaxResults(1);
+        return (Integer) query.getSingleResult();
+    }
 }
