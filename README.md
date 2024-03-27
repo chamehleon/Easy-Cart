@@ -22,15 +22,15 @@ To use this application:
 - Deploy the application on a server.
 - Access the application through a web browser.
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
 - Servlets
 - JSP
-- Asynchronous Development  - Techniques (AJAX)
 - Object-Relational Mapping Framework (Hibernate)
+- HikariCP (Connection Pooling)
 - JSON Binding(GSON)
-- Hikari DataSource
+- JavaScript
+- Asynchronous Development Techniques (AJAX)
+- HTML5
+- CSS3
 ## Contributors
 This project was developed by
 
