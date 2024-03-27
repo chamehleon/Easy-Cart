@@ -190,7 +190,7 @@ public class CartService {
         Set<CartItem> cartItems = getCartItems(cartId).get();
         for(CartItem item : cartItems){
             if(item.getProduct().getStockQuantity()<item.getQuantity()){
-                return "Sorry ,our stock does not have "+item.getProduct().getProductName()+" with this quantity";
+                return "Sorry, "+item.getProduct().getProductName()+" is currently out of stock.";
             }
 
         }
@@ -244,6 +244,7 @@ public class CartService {
             return "success";
         });
     }
+
     private static void handleOrder(Integer cartId, Customer customer, EntityManager em){
         Cart cart = getCartById(cartId);
         if (cart == null) {
@@ -261,6 +262,7 @@ public class CartService {
             product.setStockQuantity(product.getStockQuantity() - cartItem.getQuantity());
             order.addOrderItem(product,cartItem.getQuantity(),cartItem.getAmount());
         }
+
         orderDAO.create(order, em);
     }
 
