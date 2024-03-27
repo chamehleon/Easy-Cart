@@ -5,11 +5,14 @@ import com.ecommerce.Persistence.DAOs.Implementations.OrderDAO;
 import com.ecommerce.Persistence.DAOs.Implementations.OrderItemDAO;
 import com.ecommerce.Persistence.DTOs.CustomerDTO;
 import com.ecommerce.Persistence.Entities.Order;
+import com.ecommerce.Persistence.Entities.OrdersItem;
 import com.ecommerce.Utils.JpaTransactionManager;
 import jakarta.persistence.Query;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class OrderService {
@@ -36,6 +39,12 @@ public class OrderService {
             OrderItemDAO orderItemDAO = new OrderItemDAO();
             return orderItemDAO.getOrderItemsTotalByOrderId(orderId, em).orElse(new BigDecimal(0.0));
         });
+    }
+        public static Map<Order, List<OrdersItem>> getAllOrderItems(ArrayList<Order> orders) {
+        Map<Order, List<OrdersItem>> ordersWithItems;
+        OrderDAO orderDAO = new OrderDAO();
+        ordersWithItems = (Map<Order, List<OrdersItem>>) JpaTransactionManager.doInTransaction(em -> orderDAO.getItemsOfOrders(orders, em));
+        return ordersWithItems;
     }
 
     public static Integer getMostRecentOrderPrimaryKeyByCustomer(CustomerDTO customerDTO) {

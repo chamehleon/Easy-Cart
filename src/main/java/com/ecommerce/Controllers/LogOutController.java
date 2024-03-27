@@ -33,7 +33,9 @@ public class LogOutController implements IController {
             session.invalidate();
         }
         // Redirect to a logged out page or wherever appropriate
+
         resolver.redirect(ResourcePathMapper.HOME_CONTROLLER.getPath());
         return resolver;
     }
 }
+

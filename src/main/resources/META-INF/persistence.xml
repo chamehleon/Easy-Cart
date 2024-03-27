@@ -34,7 +34,7 @@
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ecommerce" />
             <property name="jakarta.persistence.jdbc.user" value="root" />
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="jakarta.persistence.jdbc.password" value="admin" />
+            <property name="jakarta.persistence.jdbc.password" value="mero2000" />
             <property name="hibernate.connection.pool_size" value="5"/>
             <property name="hibernate.hikari.connectionTimeout" value="30000"/>
             <property name="hibernate.hikari.minimumIdle" value="5"/>

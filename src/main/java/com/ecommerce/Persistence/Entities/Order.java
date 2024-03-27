@@ -9,6 +9,7 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -29,10 +30,12 @@ public class Order {
     @Column(name = "ordered_at", nullable = false)
     private Instant orderedAt;
 
-    @OneToMany(mappedBy = "order" ,fetch = FetchType.EAGER ,cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "order" ,fetch = FetchType.EAGER )
     private Set<OrdersItem> orderItems = new LinkedHashSet<>();
 
     public void addOrderItem(Product product , Integer quantity , BigDecimal amount){
         orderItems.add(new OrdersItem(this, product, quantity, amount));
     }
+    @OneToMany(mappedBy = "order",fetch = FetchType.EAGER)
+    List<OrdersItem> ordersItems ;
 }

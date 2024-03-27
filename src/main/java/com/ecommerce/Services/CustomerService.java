@@ -4,13 +4,24 @@ import com.ecommerce.Persistence.DAOs.Implementations.CustomerDAO;
 import com.ecommerce.Persistence.DAOs.Implementations.ProductDAO;
 import com.ecommerce.Persistence.DTOs.CustomerDTO;
 import com.ecommerce.Persistence.Entities.Customer;
+import com.ecommerce.Persistence.Entities.Order;
 import com.ecommerce.Persistence.Mappers.CustomerMapper;
 import com.ecommerce.Utils.JpaTransactionManager;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class CustomerService {
+
+
+    public static ArrayList<Order> getUserOrders(CustomerDTO customer , int page) {
+        ArrayList<Order> orders = new ArrayList<>();
+        CustomerDAO customerDAO = new CustomerDAO();
+        Customer cust = CustomerMapper.INSTANCE.toEntity(customer);
+        orders = JpaTransactionManager.doInTransaction(em -> customerDAO.getCustomerOrdersWithItems(cust,  page, em));
+        return orders;
+    }
 
     public static boolean register(Customer customer) {
         CustomerDAO customerDAO = new CustomerDAO();
@@ -44,4 +55,11 @@ public class CustomerService {
             return customerDAO.findById(customerId, em);
         }));
     }
+    public static boolean UpdateUserEntity(CustomerDTO customer) {
+        CustomerDAO customerDAO = new CustomerDAO();
+        Customer cust = CustomerMapper.INSTANCE.toEntity(customer);
+        Optional<Customer> updatedCustomer = JpaTransactionManager.doInTransaction(em -> customerDAO.updateUserInfo(cust, em));
+        return updatedCustomer.isPresent();
+    }
+
 }

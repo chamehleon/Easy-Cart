@@ -10,7 +10,7 @@ import java.time.LocalDate;
 /**
  * DTO for {@link com.ecommerce.Persistence.Entities.Customer}
  */
-@Value
+
 @Data
 public class CustomerDTO implements Serializable {
     Integer id;

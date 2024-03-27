@@ -39,11 +39,16 @@
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>com.ecommerce.Controllers.AdminControllers.AdminFrontController</servlet-class>
     </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
 
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>AdminServlet</web-resource-name>
-            <url-pattern>/Admin</url-pattern>
+            <url-pattern>/admin</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>easy-cart-admin</role-name>
@@ -59,10 +64,6 @@
     </security-role>
 
 
-    <servlet-mapping>
-        <servlet-name>AdminServlet</servlet-name>
-        <url-pattern>/Admin</url-pattern>
-    </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>front</welcome-file>
