@@ -24,6 +24,9 @@ public class FrontController extends HttpServlet {
         System.out.println(" Controller is: " + controllerName);
         System.out.println(request.getPathInfo());
         System.out.println(request.getRequestURI());
+        if ("/ecommerce/".equals(request.getRequestURI())) {
+            controllerName = "StartUpController";
+        }
 
         ControllerFactory factory = ControllerFactory.getInstance();
         IController controller = factory.getController(controllerName);

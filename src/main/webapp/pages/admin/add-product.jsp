@@ -31,7 +31,9 @@
   </head>
 
   <body>
-  <jsp:include page="header.jsp" />
+  <jsp:include page="header.jsp">
+    <jsp:param name="active" value="products" />
+  </jsp:include>
     <div class="container tm-mt-big tm-mb-big">
       <div class="row">
         <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
