@@ -56,8 +56,8 @@ public class ControllerFactory {
 //                return UpdateUserInfoController.getInstance();
 //            case "UserOrdersController":
 //                return UserOrdersController.getInstance();
-//            case "LogOutController":
-//                return LogOutController.getInstance();
+            case "LogOutController":
+                return LogOutController.getInstance();
 
 
 

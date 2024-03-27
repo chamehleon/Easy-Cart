@@ -31,6 +31,8 @@ public enum ResourcePathMapper {
     PAGE_ADMIN_ORDER_HISTORY("/pages/admin/order-history.jsp"),
 
     PAGE_ORDER_ERROR("/pages/order-error.html"),
+
+    HOME_CONTROLLER("HomeController"),
     PAGE_ERROR("/pages/error.jsp");
 
 

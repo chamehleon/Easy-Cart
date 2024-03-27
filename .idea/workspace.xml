@@ -10,25 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c684136-d234-410e-9658-376878f7ff9f" name="Changes" comment="footer edit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/StartUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/LogOutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/ControllerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/FrontController/FrontController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ecommerce/Utils/ResourcePathMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/header.jsp" afterDir="false" />
     </list>
-    <list id="1f586932-55e6-4763-80eb-9a638ace26bd" name="Changes by Lenovo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/add-product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/add-product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/edit-product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/edit-product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/products.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/products.jsp" afterDir="false" />
-    </list>
+    <list id="1f586932-55e6-4763-80eb-9a638ace26bd" name="Changes by Lenovo" comment="" />
     <list id="1a1c097e-c396-46d0-b254-7e8461d8f343" name="Changes by me771" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,32 +39,6 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/webapp/pages/admin/accounts.jsp">
-      <ranges>
-        <range start1="32" end1="33" start2="32" end2="35" changelist="1f586932-55e6-4763-80eb-9a638ace26bd" />
-        <range start1="71" end1="160" start2="73" end2="162" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/pages/admin/index.jsp">
-      <ranges>
-        <range start1="23" end1="24" start2="23" end2="26" changelist="1f586932-55e6-4763-80eb-9a638ace26bd" />
-        <range start1="131" end1="283" start2="133" end2="285" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/webapp/pages/admin/header.jsp">
-      <ranges>
-        <range start1="22" end1="23" start2="22" end2="23" changelist="1f586932-55e6-4763-80eb-9a638ace26bd" />
-        <range start1="28" end1="29" start2="28" end2="29" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-        <range start1="30" end1="43" start2="30" end2="43" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-        <range start1="44" end1="45" start2="44" end2="45" changelist="1f586932-55e6-4763-80eb-9a638ace26bd" />
-        <range start1="48" end1="48" start2="48" end2="49" changelist="1f586932-55e6-4763-80eb-9a638ace26bd" />
-        <range start1="51" end1="52" start2="52" end2="53" changelist="1f586932-55e6-4763-80eb-9a638ace26bd" />
-        <range start1="56" end1="70" start2="57" end2="71" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-        <range start1="73" end1="74" start2="74" end2="75" changelist="0c684136-d234-410e-9658-376878f7ff9f" />
-      </ranges>
-    </file>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
