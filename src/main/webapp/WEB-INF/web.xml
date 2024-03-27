@@ -31,9 +31,9 @@
 <!--        </welcome-file>-->
 <!--    </welcome-file-list>-->
     
-    <!-- <error-page>
+    <error-page>
         <location>/pages/error.jsp</location>
-    </error-page> -->
+    </error-page>
 
     <servlet>
         <servlet-name>AdminServlet</servlet-name>
