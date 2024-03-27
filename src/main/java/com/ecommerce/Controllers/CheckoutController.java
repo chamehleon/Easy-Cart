@@ -51,6 +51,9 @@ public class CheckoutController implements IController {
                 System.out.println("result  "+result);
                if (result.equals("success")) {
                    resolver.plainText("checkout is done bro");
+                   // put orderID on session
+                   Integer orderID = OrderService.getMostRecentOrderPrimaryKeyByCustomer((CustomerDTO) session.getAttribute("currentUser"));
+                     session.setAttribute("orderID", orderID);
                } else {
                    resolver.plainText(result);
                }

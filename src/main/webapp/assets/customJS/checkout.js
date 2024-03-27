@@ -6,14 +6,17 @@ function proceedToCheckout(){
           .then((data) => {
             if (data == "Insufficient credit") {
               console.log("credit error");
-    //          document.getElementById("checkoutError").innerText = data;
+              document.getElementById("checkoutError").innerText = data;
+
+
             } else if(data == "checkout is done bro"){
               window.location.href ="front?controller=CheckoutSuccessController";
+              localStorage.removeItem("cartItems");
 
             }
             else{
               console.log("out of stock");
-    //          document.getElementById("checkoutError").innerText = data;
+              document.getElementById("checkoutError").innerText = data;
             }
           })
           .catch((error) => {
