@@ -29,7 +29,9 @@
   </head>
 
   <body id="reportsPage">
-  <jsp:include page="header.jsp" />
+  <jsp:include page="header.jsp">
+    <jsp:param name="active" value="products" />
+  </jsp:include>
     <div class="container mt-5">
       <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">

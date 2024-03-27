@@ -177,7 +177,7 @@
             <c:when test="${not empty sessionScope.currentUser}">
               <a
 
-                      href="front?controller=MyAccountController"
+                      href="front?controller=RegisterController"
                       class="flex-c-m p-lr-10 trans-04"
               >
                 My Account

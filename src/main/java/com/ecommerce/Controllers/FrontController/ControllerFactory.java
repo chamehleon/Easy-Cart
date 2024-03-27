@@ -50,6 +50,7 @@ public class ControllerFactory {
                 return CheckoutSuccessController.getInstance();
 
 
+
                 
             case "MyAccountController":
                 return MyAccountController.getInstance();
@@ -60,8 +61,17 @@ public class ControllerFactory {
            case "LogOutController":
                return LogOutController.getInstance();
 
-                case "CheckLoginServlet":
+ 
+
+            case "CheckLoginServlet":
                 return CheckLoginServlet.getInstance();
+            case "StartUpController":
+                return StartUpController.getInstance();
+//            case "UpdateUserInfoController":
+//                return UpdateUserInfoController.getInstance();
+//            case "UserOrdersController":
+//                return UserOrdersController.getInstance();
+      
 
 
 
