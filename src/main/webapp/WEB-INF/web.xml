@@ -30,19 +30,24 @@
         </welcome-file>
     </welcome-file-list>
     
-    <error-page>
+    <!-- <error-page>
         <location>/pages/error.jsp</location>
-    </error-page>
+    </error-page> -->
 
     <servlet>
         <servlet-name>AdminServlet</servlet-name>
         <servlet-class>com.ecommerce.Controllers.AdminControllers.AdminFrontController</servlet-class>
     </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
 
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>AdminServlet</web-resource-name>
-            <url-pattern>/Admin</url-pattern>
+            <url-pattern>/admin</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>easy-cart-admin</role-name>
@@ -58,9 +63,5 @@
     </security-role>
 
 
-    <servlet-mapping>
-        <servlet-name>AdminServlet</servlet-name>
-        <url-pattern>/Admin</url-pattern>
-    </servlet-mapping>
 
 </web-app>
