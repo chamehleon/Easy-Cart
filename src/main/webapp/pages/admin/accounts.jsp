@@ -59,7 +59,7 @@
                 <td>${customer.creditLimit}</td>
                 <td>${customer.city}</td>
                 <td class="center-button">
-                  <a href="front?controller=AdminOrderHistoryController&customerId=${customer.id}" class="btn btn-primary btn-small text-uppercase mb-3">
+                  <a href="Admin?controller=AdminOrderHistoryController&customerId=${customer.id}" class="btn btn-primary btn-small text-uppercase mb-3">
                     Get Order History
                   </a>
                 </td>

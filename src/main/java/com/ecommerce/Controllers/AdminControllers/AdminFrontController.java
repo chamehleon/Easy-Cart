@@ -54,7 +54,7 @@ public class AdminFrontController extends HttpServlet {
             case REDIRECT:
                 String contextPath = request.getContextPath();
                 System.out.println("context path: " + contextPath);
-                view = contextPath + "/front?controller=" +view;
+                view = contextPath + "/Admin?controller=" +view;
                 response.sendRedirect(view);
                 break;
             case PLAIN_TEXT:

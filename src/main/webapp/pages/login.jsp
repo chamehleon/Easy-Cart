@@ -100,7 +100,7 @@
           >
             <form method="post" onsubmit="login(event)">
               <h4 class="mtext-105 cl2 txt-center p-b-30">LOGIN</h4>
-
+              <span id="loginError" style="color: red"></span>
               <div class="bor8 m-b-20 how-pos4-parent">
                 <input
                   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"

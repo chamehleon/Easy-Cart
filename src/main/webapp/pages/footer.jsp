@@ -8,13 +8,13 @@
 
 					<ul>
 						<li class="p-b-10">
-							<a href="front?controller=FetchProducts" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="front?controller=FetchProducts&category=women" class="stext-107 cl7 hov-cl1 trans-04">
 								Women
 							</a>
 						</li>
 
 						<li class="p-b-10">
-							<a href="front?controller=FetchProducts" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="front?controller=FetchProducts&category=men" class="stext-107 cl7 hov-cl1 trans-04">
 								Men
 							</a>
 						</li>

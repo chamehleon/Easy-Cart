@@ -48,6 +48,8 @@ public class ControllerFactory {
                 return CheckoutController.getInstance();
             case "CheckoutSuccessController":
                 return CheckoutSuccessController.getInstance();
+                case "CheckLoginServlet":
+                return CheckLoginServlet.getInstance();
 //            case "UpdateUserInfoController":
 //                return UpdateUserInfoController.getInstance();
 //            case "UserOrdersController":

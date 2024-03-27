@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<%@ page session="false" %>--%>
 <header class="header-v3">
   <!-- Header desktop -->
   <div class="container-menu-desktop trans-03">
@@ -35,24 +37,25 @@
               <a href="front?controller=ContactController">Contact</a>
             </li>
 
-            <li class="${param.active == 'admin' ? 'active-menu' : ''}">
-              <a href="front?controller=AdminController">Admin</a>
-            </li>
+            <%--            <li class="${param.active == 'admin' ? 'active-menu' : ''}">--%>
+            <%--              <a href="front?controller=AdminController">Admin</a>--%>
+            <%--            </li>--%>
           </ul>
         </div>
 
         <!-- Icon header -->
         <div class="wrap-icon-header flex-w flex-r-m h-full">
           <div class="flex-c-m h-full p-r-25 bor6">
+<c:if test="${empty sessionScope.currentUser}">
             <a
-              class="flex-c-m h-full p-r-25 bor6 custom-style"
-              href="front?controller=LoginController"
-              >LOGIN</a
-            >
+                    class="flex-c-m h-full p-r-25 bor6 custom-style"
+                    href="front?controller=LoginController"
+            >LOGIN</a>
+</c:if>
 
             <div
-              class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart cart-count"
-              data-notify="2"
+                    class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart cart-count"
+                    data-notify="2"
             >
               <i class="zmdi zmdi-shopping-cart"></i>
             </div>
@@ -75,7 +78,7 @@
     <!-- Logo moblie -->
     <div class="logo-mobile">
       <a href="front?controller=HomeController"
-        ><img src="assets/images/icons/dd.png" alt="IMG-LOGO"
+      ><img src="assets/images/icons/dd.png" alt="IMG-LOGO"
       /></a>
     </div>
 
@@ -83,8 +86,8 @@
     <div class="wrap-icon-header flex-w flex-r-m h-full m-r-15">
       <div class="flex-c-m h-full p-r-5">
         <div
-          class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
-          data-notify="2"
+                class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart"
+                data-notify="2"
         >
           <i class="zmdi zmdi-shopping-cart"></i>
         </div>
@@ -102,9 +105,11 @@
   <!-- Menu Mobile -->
   <div class="menu-mobile">
     <ul class="main-menu-m">
+
       <li>
         <a href="front?controller=LoginController">Login</a>
       </li>
+
       <li>
         <a href="front?controller=HomeController">Home</a>
         <!-- <ul class="sub-menu-m">
@@ -117,9 +122,9 @@
 
       <li>
         <a
-          href="front?controller=FetchProducts"
-          class="label1 rs1"
-          data-label1="hot"
+                href="front?controller=FetchProducts"
+                class="label1 rs1"
+                data-label1="hot"
         >
           Shop</a
         >
@@ -158,4 +163,4 @@
   </div>
 </header>
 <script defer src="assets/customJS/cartProducts.js"></script>
-  <script defer src="assets/customJS/header.js"></script> 
+<script defer src="assets/customJS/header.js"></script>
