@@ -39,7 +39,7 @@ This project was developed by
 - [Nada Emam](https://github.com/chamehleon)
 ## Contributing
 
-Contributions to the Void Chat App are welcome! Feel free to submit a pull request or open an issue on GitHub if you have any ideas for improvements or new features.
+Contributions to the Easy Cart App are welcome! Feel free to submit a pull request or open an issue on GitHub if you have any ideas for improvements or new features.
 
 ---
 
